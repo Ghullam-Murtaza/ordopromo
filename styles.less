@@ -1,0 +1,910 @@
+// Variables
+
+// Screen Widths
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+@xxl: 1400px;
+
+
+// Mixins 
+.container(@screen-width) {
+  max-width: if((@screen-width = @sm), 540px);
+  max-width: if((@screen-width = @md), 720px);
+  max-width: if((@screen-width = @lg), 960px);
+  max-width: if((@screen-width = @xl), 1140px);
+  max-width: if((@screen-width = @xxl), 1320px);
+  margin-left: auto;
+  margin-right: auto;  
+}
+.padding-x(@padding-left-right) {
+  padding-left: @padding-left-right;
+  padding-right: @padding-left-right;
+}
+
+
+
+// X-Small devices (portrait phones, less than 576px (" 0px " and up))
+// No media query for `xs` since this is the default in Bootstrap
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #212529;
+  // line-height: 1.5rem;
+}
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  line-height: 1.2;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #0d6efd;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+header {
+  .padding-x(12px);
+  position: -webkit-sticky;   // "Sticky" only works when there is no Parent Element other than 'header' element or
+  position: sticky;   //  'Parent's Display Property' is set to 'unset', 'contents', 'initial' or 'inline'
+  top: 0;
+
+  nav {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
+    border-radius: 50px;
+    border: 1px solid black;
+    .padding-x(12px);
+
+    @media (min-width: 501px) {
+      .padding-x(32px);
+    }
+  }
+}
+
+.top-image-container {
+  .padding-x(12px);
+}
+
+.products-heading {
+  display: flex;
+
+  div {
+    .padding-x(12px);
+    width: 50%;
+    flex: 0 0 auto;
+    h1, h5 {
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: calc(1.375rem + 1.5vw);
+    }
+    h5 {
+      text-align: end;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  // border: 1px solid red;
+  
+  div {
+    width: 50%;
+    flex: 0 0 auto;
+    background-color: greenyellow;
+    border: 1px solid black;
+    
+    a {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Cards
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 24px;  // Problem: Shows 1 less Card in a Row, so use 'Padding' on individual Card. (Note: 'column-gap' works
+  // properly when there is no 'width' (whether relative or absolute values) defined on the 'Flex Items'. So use 'Horizontal
+  // Padding' on the 'Flex Items' and set 'row-gap' on the 'Flex Container'.
+  row-gap: 24px;
+  margin-top: 48px;
+  // .padding-x(12px);
+  margin-bottom: 12px;
+  // All Cards
+  >div {
+    width: 50%;
+    flex: 0 0 auto;
+    .padding-x(12px);
+  }
+  .card {
+    display: flex;
+    align-items: flex-end;
+    border-radius: 0.25rem;
+    word-wrap: break-word;
+  }
+// >:first-child>.card
+  // First Card
+  >:first-child>.card {
+    border: 1px solid rgba(0,0,0,.125);
+    
+    &>div {
+      margin-left: 8px;
+      
+      h1 {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-weight: 200;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  // Remaining Cards
+  >:not(:first-child, :last-child) {
+
+    >a {
+      // text-decoration: none;
+      // -webkit-tap-highlight-color: transparent;
+      // display: block;
+      
+      .card {
+        background-color: rgb(33, 37, 41);
+        
+        h3 {
+          color: #ffffff;
+          font-weight: 300;
+          margin-bottom: 0.5rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+    
+  }
+  // Last Card
+  >:last-child .card {
+    background-color: #abaaaa;
+
+    >div {
+      color: #ffffff;
+      margin-left: 1rem;
+
+      >h2 {
+        font-weight: 700;
+        margin-top: 1rem;
+      }
+      >p:last-of-type {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// Search Container
+.search-container {
+  margin-top: 3rem;
+  .padding-x(12px);
+
+  >div {
+    background-color: #fbfbfa;
+    text-align: center;
+    border-radius: 210px;
+    
+    >h1 {
+      font-size: calc(1.375rem + 1.5vw);
+    }
+    >p {
+      text-align: center;
+      line-height: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    >form {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: stretch;
+      width: 100%;
+
+      >input {
+        flex-grow: 1;
+        border: 0px ;
+        border-radius: 30px;
+        box-shadow: 1px 1px 2px #cac7c7;
+        padding: 12px 65px 12px 25px;
+        display: block;
+        // position: relative;
+        // width: 1%;
+        min-width: 0;
+      }
+      >.dropdown {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 4%;
+        right: 4%;
+        z-index: 2;
+        width: 93%;
+        padding: 0.5rem 0;
+        // margin: 0;
+        // font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        box-shadow: 2px 3px 4px #c4bfbf;
+
+        >:first-child {
+          height: 280px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+
+          >ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+          }
+        }
+        >:last-child {
+          text-align: center;
+          box-shadow: 0px -1px 0px #d0cdcd;
+
+          >a {
+            color: #000000;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+// Brands Heading
+.brands-heading {
+  margin-top: 3rem;
+  .padding-x(12px);
+
+  >h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    font-weight: 500;
+    // line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Brands Logos
+.brands-logos {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+// Slogan Image
+.slogan-image {
+  margin-top: 3rem;
+  .padding-x(12px);
+}
+
+// Brand Merch Section
+.brand-merch-section {
+  background-image: url("./assets/images/HOME-B20.jpg");
+  height: 525px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  >div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    >:first-child {
+      margin-top: 100px;
+      .padding-x(12px);
+      flex-shrink: 0;
+      width: calc(80%/1.2);
+      text-align: center;
+
+      >h1 {
+        font-weight: 800;
+      }
+      >p {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-weight: 200;
+
+      }
+    }
+    >:last-child {
+      display: none;
+    }
+  }
+}
+
+// Lets Talk Section
+.lets-talk-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  >.book-meeting, >.live-chat {
+    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    .padding-x(12px);
+  }
+  
+  >.book-meeting>:first-child, >.live-chat>div {
+  
+    >h1 {
+      font-weight: 700;
+    }
+    >p {
+      font-size: 22px;
+      font-weight: 100;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  >.book-meeting>:last-child>button {
+      font-size: 30px;
+      font-weight: 700;
+      margin-left: 10px;
+      padding: 15px 44px;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      color: #ffffff;
+      background-color: #939396;
+      text-align: center;
+      line-height: 1.5;
+  }
+
+}
+
+// Bottom Image
+.bottom-image {
+  background-image: url("https://ordopromo.fiqsolution.com/new_assets/images/HOME-B26.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 250px;
+  .padding-x(12px);
+  text-align: right;
+
+  >img {
+    margin-top: 87px;
+    width: 250px;
+  }
+
+}
+
+// Footer
+.footer {
+  padding: 0.5rem;
+  background-color: #000000;
+
+  >:first-child, >:last-child {
+    text-align: center;
+  }
+  >:first-child>img {
+    width: 300px;
+  }
+  >:last-child>img {
+    width: 280px;
+  }
+  
+}
+
+
+
+
+
+// Screen Width 0px to 374px
+@media (max-width: (375px - 0.02px)) {
+
+  header {
+    nav {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+// Screen Width 0px to 500px
+@media (max-width: 500px) {
+
+  // Logo Image
+  header>nav>.logo {
+    width: 140px;
+    height: 31px;
+  }
+  // Products Heading
+  .products-heading>div>h5 {
+    font-size: 8px;
+  }
+  // All Cards
+  .cards-list {
+    .card {
+      height: 110px;
+    } 
+    // First Card
+    >:first-child>.card>div {
+      h1 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+    // Remaining Cards
+    >:not(:first-child, :last-child)>a .card h3 {
+      font-size: 14px;
+    }
+    // Last Card
+    >:last-child .card {
+      p {
+        font-size: 7px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }    
+  }
+  // Search
+  .search-container>div {
+    padding: 40px 43px;
+
+    >h1 {
+      font-size: 16px;
+    }
+    >p {
+      font-size: 11px;
+      line-height: 16.5px;
+    }
+    >form>input {
+      padding: 8px 45px;  
+
+      >.dropdown>:first-child {
+        height: 220px;
+      
+        >ul {
+          padding-left: 1rem;
+        }
+      }  
+    }
+  }
+  // Brands Logos
+  .brands-logos>img {
+    width: 8%;
+  }
+  // Brand Merch Section
+  .brand-merch-section {
+    background-size: 100% 85%;
+  }
+  // Lets Talk Section
+  .lets-talk-section{
+    >.book-meeting>:last-child>button {
+      padding: 6px 20px;
+      font-size: 16px;
+    }
+    >.live-chat {
+      margin-top: 20px !important;
+    }
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 110px;
+
+    >img {
+      margin-top: 64px !important;
+      width: 60px !important;
+    }
+  }
+}
+
+
+
+
+// Screen Width 0px to 768px
+@media (max-width: 767.98px) {
+
+  // Brand Merch Section
+  .brand-merch-section>div>:first-child>p {
+    font-size: 11px;
+  }
+
+}
+
+
+
+// Screen Width 0px to 1023px
+@media (max-width: 1022.98px) {
+
+  // Lets Talk Section
+  .lets-talk-section {
+    >.book-meeting>:first-child, >.live-chat>div {
+      >h1 {
+        font-size: 22px;
+      }
+      >p {
+        font-size: 11px;
+      }
+    }
+  }
+  // Footer
+  .footer {
+
+    >:first-child>img {
+      width: 200px;
+    }
+    >:last-child>img {
+      width: 180px;
+    }
+  }
+
+}
+
+
+
+// Screen Width 501px to 768px
+@media (min-width: 501px) and (max-width: @md) {
+
+  // Search
+  .search-container>div {
+    padding: 40px 115px;
+  
+    >p {
+      font-size: 11px;
+      line-height: 16.5px;
+    }
+    >form>input {
+      padding: 10px 45px;
+    }
+  }
+
+}
+
+
+
+// Screen Width 501px to 1022px
+@media (min-width: 501px) and (max-width: 1023px) {
+  // Logo Image  
+  header>nav>.logo {
+    width: 250px;
+    height: 40px;
+  }
+  // Products Heading
+  .products-heading>div>h5 {
+    font-size: 13px;
+  }
+  // All Cards
+  .cards-list {
+    .card {
+      height: 150px;
+    } 
+    // First Card
+    >:first-child>.card>div {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+    // Remaining Cards
+    >:not(:first-child, :last-child)>a .card h3 {
+      font-size: 20px;
+    }    
+    // Last Card
+    >:last-child .card {
+      p {
+        font-size: 12px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+  // Brand Merch Section
+  .brand-merch-section {
+    background-size: 125% 85%;
+  }
+  // Lets Talk Section  
+  .lets-talk-section>.book-meeting>:last-child>button {
+    padding: 10px 30px !important;
+    font-size: 18px !important;
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 152px;
+
+    >img {
+      margin-top: 37px !important;
+      width: 155px !important;
+    }
+  }
+
+}
+
+// Screen Width 768px to 1022px
+@media (min-width: @md) and (max-width: 1023px) {
+
+  // Search
+  .search-container>div {
+    padding: 40px 125px;
+
+    >p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+
+}
+
+
+
+// Screen Width 768px to 1278px
+@media (min-width: @md) and (max-width: 1279px) {
+
+  // Brand Merch Section
+  .brand-merch-section>div>:first-child>p {
+    font-size: 13px;
+  }
+}
+
+
+// Screen Width 1023px and up
+@media (min-width: 1023px) {
+
+  .cards-list {
+    // All Cards
+    .card {
+      height: 175px;
+    }
+    // Last Card
+    >:last-child .card h2 {
+      font-size: calc(1.325rem + .9vw);
+    }
+  }
+
+}
+
+
+// Screen Width 1024px to 1278px
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .cards-list {
+    // First Card
+    >:first-child>.card>div {
+      h1 {
+        font-size: 23px;  
+      }
+      p {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+    // Remaining Cards
+    >:not(:first-child, :last-child)>a .card h3 {
+      font-size: 23px;
+    } 
+    // Last Card
+    >:last-child .card p {
+        font-size: 15px;
+    }      
+  }
+  // Search
+  .search-container>div {
+    padding: 40px 130px;
+
+    >p {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  // Brand Merch Section
+  .brand-merch-section {
+    background-size: 100% 80%;
+  }
+  // Lets Talk Section  
+  .lets-talk-section>.book-meeting>:last-child>button {
+    padding: 12px 40px !important;
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 203px;
+
+    >img {
+      width: 170px !important;
+    }
+  }
+
+}
+
+
+
+// Screen Width 1279px and up
+@media (min-width: 1279px) {
+
+  .cards-list {
+  // First Card
+  >:first-child>.card>div {
+    h1 {
+      font-size: 2.5rem;  
+    }
+    p {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+  // Remaining Cards
+  >:not(:first-child, :last-child)>a .card h3 {
+    font-size: 1.75rem;
+  }   
+  }
+  // Search
+  .search-container>div {
+    padding: 40px 185px;
+  }  
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: @sm) { // @sm: 576px;
+
+  header, .products-heading {
+    .container(@sm);
+  }
+
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: @md) { // @md: 768px;
+
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section {
+    .container(@md);
+  }
+  .products-list>div, .cards-list>div {
+    width: calc(100% / 3);
+  }
+  // Lets Talk Section
+  .lets-talk-section{
+    >.book-meeting {
+      width: calc(70%/1.2);
+    }
+    >.live-chat {
+      width: calc(50%/1.2);
+    }
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: @lg) { // @lg: 992px;
+
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section {
+    .container(@lg);
+  }
+  .products-list>div {
+    width: 25%;
+  }
+  .search-container>div {
+    width: calc(100%/1.2);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // Brand Merch Section
+  .brand-merch-section>div{
+
+    >:first-child {
+      width: 50%;
+    }
+    >:last-child {
+      display: block;
+      width: calc(20%/1.2);
+    }
+  }
+
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: @xl) { // @xl: 1200px;
+
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section {
+    .container(@screen-width: @xl);
+  }
+  .products-list>div {
+    width: 25%;
+  }
+  // Last Card
+  .cards-list>:last-child .card h2 {
+    font-size: 2rem;
+  }
+  // Search
+  .search-container>div>h1, .brands-heading>h1 {
+    font-size: 2.5rem;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: @xxl) { // @xxl: 1400px;
+
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section {
+    .container(@xxl);
+  }
+  .products-list>div {
+    width: 25%;
+  }
+
+
+}
+
+// Screen Size 1440px and up
+@media (min-width: 1440px){
+
+  // Brand Merch Section
+  .brand-merch-section>div>:first-child>p {
+    font-size: 21px;
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 285px;
+
+    >img {
+      margin-top: 120px !important;
+    }    
+  }
+}
+
+
+// Using 'media queries by Nesting them inside the Rulesets'
+// header {
+//   margin-top: 48px;
+//   margin-left: auto;
+//   margin-right: auto;
+  
+//   @media (min-width: 768px) {
+//     max-width: 720px;
+//   }
+//   @media (min-width: 992px) {
+//     max-width: 960px;
+//   }
+  
+//   nav {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     background-color: #f6f6f6;
+//     border-radius: 50px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     border: 1px solid black;
+    
+//   }
+// }
