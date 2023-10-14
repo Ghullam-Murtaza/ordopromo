@@ -47,6 +47,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+// Navbar
 header {
   .padding-x(12px);
   position: -webkit-sticky;   // "Sticky" only works when there is no Parent Element other than 'header' element or
@@ -61,19 +62,17 @@ header {
     flex-wrap: wrap;
     background-color: #f6f6f6;
     border-radius: 50px;
-    border: 1px solid black;
     .padding-x(12px);
-
-    @media (min-width: 501px) {
-      .padding-x(32px);
-    }
+    z-index: 999;
   }
 }
 
+// Top Image
 .top-image-container {
   .padding-x(12px);
 }
 
+// Products Heading
 .products-heading {
   display: flex;
 
@@ -96,16 +95,14 @@ header {
   }
 }
 
+// Products List
 .products-list {
   display: flex;
   flex-wrap: wrap;
-  // border: 1px solid red;
   
   div {
     width: 50%;
     flex: 0 0 auto;
-    background-color: greenyellow;
-    border: 1px solid black;
     
     a {
       img {
@@ -115,16 +112,15 @@ header {
   }
 }
 
-// Cards
+// Cards 1st and 2nd
 .cards-list {
   display: flex;
   flex-wrap: wrap;
   // gap: 24px;  // Problem: Shows 1 less Card in a Row, so use 'Padding' on individual Card. (Note: 'column-gap' works
   // properly when there is no 'width' (whether relative or absolute values) defined on the 'Flex Items'. So use 'Horizontal
-  // Padding' on the 'Flex Items' and set 'row-gap' on the 'Flex Container'.
+  // Padding' on the 'Flex Items' for 'Horizontal Spacing' and set 'row-gap' on the 'Flex Container' for 'Vertical Spacing'.
   row-gap: 24px;
   margin-top: 48px;
-  // .padding-x(12px);
   margin-bottom: 12px;
   // All Cards
   >div {
@@ -138,7 +134,6 @@ header {
     border-radius: 0.25rem;
     word-wrap: break-word;
   }
-// >:first-child>.card
   // First Card
   >:first-child>.card {
     border: 1px solid rgba(0,0,0,.125);
@@ -197,7 +192,7 @@ header {
   }
 }
 
-// Search Container
+// Search
 .search-container {
   margin-top: 3rem;
   .padding-x(12px);
@@ -206,6 +201,7 @@ header {
     background-color: #fbfbfa;
     text-align: center;
     border-radius: 210px;
+    position: static;
     
     >h1 {
       font-size: calc(1.375rem + 1.5vw);
@@ -217,7 +213,7 @@ header {
       margin-bottom: 1rem;
     }
     >form {
-      position: relative;
+      // position: relative;
       display: flex;
       flex-wrap: wrap;
       text-align: center;
@@ -241,11 +237,9 @@ header {
         top: 110%;
         left: 4%;
         right: 4%;
-        z-index: 2;
+        z-index: 1;
         width: 93%;
         padding: 0.5rem 0;
-        // margin: 0;
-        // font-size: 1rem;
         color: #212529;
         text-align: left;
         list-style: none;
@@ -287,7 +281,6 @@ header {
   >h1 {
     font-size: calc(1.375rem + 1.5vw);
     font-weight: 500;
-    // line-height: 1.2;
     margin-bottom: 0.5rem;
   }
 }
@@ -375,6 +368,11 @@ header {
       background-color: #939396;
       text-align: center;
       line-height: 1.5;
+      transition: background-color 150ms ease-in-out;
+
+      &:hover {
+        background-color: #000000;
+      }
   }
 
 }
@@ -419,13 +417,14 @@ header {
 // Screen Width 0px to 374px
 @media (max-width: (375px - 0.02px)) {
 
-  header {
-    nav {
-      padding-top: 2px;
-      padding-bottom: 2px;
-    }
+  // Navbar
+  header>nav {
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 }
+
+
 
 // Screen Width 0px to 500px
 @media (max-width: 500px) {
@@ -522,7 +521,6 @@ header {
 
 
 
-
 // Screen Width 0px to 768px
 @media (max-width: 767.98px) {
 
@@ -530,7 +528,6 @@ header {
   .brand-merch-section>div>:first-child>p {
     font-size: 11px;
   }
-
 }
 
 
@@ -559,7 +556,16 @@ header {
       width: 180px;
     }
   }
+}
 
+
+
+@media (min-width: 501px) {
+
+  // Navbar
+  header>nav {
+    .padding-x(32px);
+  }
 }
 
 
@@ -579,13 +585,13 @@ header {
       padding: 10px 45px;
     }
   }
-
 }
 
 
 
 // Screen Width 501px to 1022px
 @media (min-width: 501px) and (max-width: 1023px) {
+  
   // Logo Image  
   header>nav>.logo {
     width: 250px;
@@ -642,8 +648,9 @@ header {
       width: 155px !important;
     }
   }
-
 }
+
+
 
 // Screen Width 768px to 1022px
 @media (min-width: @md) and (max-width: 1023px) {
@@ -657,8 +664,6 @@ header {
       line-height: 18px;
     }
   }
-
-
 }
 
 
@@ -673,9 +678,11 @@ header {
 }
 
 
+
 // Screen Width 1023px and up
 @media (min-width: 1023px) {
 
+  // Cards 1st and 2nd
   .cards-list {
     // All Cards
     .card {
@@ -686,13 +693,14 @@ header {
       font-size: calc(1.325rem + .9vw);
     }
   }
-
 }
+
 
 
 // Screen Width 1024px to 1278px
 @media (min-width: 1024px) and (max-width: 1279px) {
 
+  // Cards 1st and 2nd
   .cards-list {
     // First Card
     >:first-child>.card>div {
@@ -738,7 +746,6 @@ header {
       width: 170px !important;
     }
   }
-
 }
 
 
@@ -746,6 +753,7 @@ header {
 // Screen Width 1279px and up
 @media (min-width: 1279px) {
 
+  // Cards 1st and 2nd
   .cards-list {
   // First Card
   >:first-child>.card>div {
@@ -769,15 +777,16 @@ header {
 }
 
 
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: @sm) { // @sm: 576px;
 
   header, .products-heading {
     .container(@sm);
   }
-
-
 }
+
+
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: @md) { // @md: 768px;
@@ -797,8 +806,9 @@ header {
       width: calc(50%/1.2);
     }
   }
-
 }
+
+
 
 // Large devices (desktops, 992px and up)
 @media (min-width: @lg) { // @lg: 992px;
@@ -825,8 +835,9 @@ header {
       width: calc(20%/1.2);
     }
   }
-
 }
+
+
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: @xl) { // @xl: 1200px;
@@ -848,8 +859,9 @@ header {
   h1{
     font-size: 2.5rem;
   }
-
 }
+
+
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: @xxl) { // @xxl: 1400px;
@@ -860,9 +872,9 @@ header {
   .products-list>div {
     width: 25%;
   }
-
-
 }
+
+
 
 // Screen Size 1440px and up
 @media (min-width: 1440px){
@@ -880,6 +892,9 @@ header {
     }    
   }
 }
+
+
+
 
 
 // Using 'media queries by Nesting them inside the Rulesets'
