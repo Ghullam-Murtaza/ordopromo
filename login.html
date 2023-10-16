@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Less (CSS Preprocessor) -->
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="login-navbar">
+    <nav class="">
+      <a href="https://ordopromo.fiqsolution.com/products">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON.png" height="30">
+      </a>
+      <a href="./">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-2.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-1.png" height="30">
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B28.png" height="70" width="500" class="logo">
+      <a href="#search">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-4.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-6.png" height="30">
+      <a href="https://ordopromo.fiqsolution.com/user/login" title="Login">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-5.png" height="30">
+      </a>
+    </nav>
+  </header>
+
+  <!-- Login Form -->
+  <div class="login-form">
+    <div>
+      <div>
+        <div class="login-heading">
+          <h1>Log In.</h1>
+          <p>New user create an account. <a href="https://ordopromo.fiqsolution.com/user/register">Register Here</a>
+          </p>
+        </div>
+          <form class="form-fields" method="post" action="https://ordopromo.fiqsolution.com/user/login-submit">
+            <!-- <input type="hidden" name="_token" value="cotBE0BUoe2fUOx2QAASdsyB5hyJg6Iy2eBbzIAT"> <input type="hidden"
+              name="cart" id="cart" value="">
+              <input type="hidden" name="catgory_num" id="catgory_num" value="">
+              <input type="hidden" name="category" id="category" value=""> -->
+            <div>
+              <label for="login_email">Email</label>
+              <div>
+                <input type="email" name="login_email" id="login_email" required>
+              </div>
+            </div>
+            <div>
+              <label for="login_password">Password</label>
+              <div>
+                <input type="password" name="login_password" id="login_password" required>
+              </div>
+            </div>
+            <div>
+              <button type="submit">Log-In.</button>
+              <div>
+                <a href="https://ordopromo.fiqsolution.com/user/forgot">
+                  Forgot your Password? Get it Back!
+                </a>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="login-footer">
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
+    </div>
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B27.jpg">
+    </div>
+  </footer>
+
+</body>
+
+</html>
