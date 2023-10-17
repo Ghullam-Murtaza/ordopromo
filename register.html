@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Less (CSS Preprocessor) -->
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="login-navbar">
+    <nav class="">
+      <a href="https://ordopromo.fiqsolution.com/products">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON.png" height="30">
+      </a>
+      <a href="./">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-2.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-1.png" height="30">
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B28.png" height="70" width="500" class="logo">
+      <a href="#search">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-4.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-6.png" height="30">
+      <a href="https://ordopromo.fiqsolution.com/user/login" title="Login">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-5.png" height="30">
+      </a>
+    </nav>
+  </header>
+
+<!-- Register Form -->
+
+  <form action="https://ordopromo.fiqsolution.com/user/register-submit" method="post" target="_self" id="register_form">
+    <label for="company_name">Company Name</label>
+    <input type="text" name="company_name" id="company_name" required>
+
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" id="fname" autocomplete="given-name" required>
+    
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+
+    <label for="position">Position</label>
+    <input type="text" name="position" id="position" required>
+    
+    <label for="register_email">Email</label>
+    <input type="email" name="register_email" id="register_email" autocomplete="email" required>
+
+    <label for="register_password">Password</label>
+    <input type="password" name="register_password" id="register_password" autocomplete="new-password" required>
+
+    <label for="register_confirm_password">Confirm Password</label>
+    <input type="password" name="register_confirm_password" id="register_confirm_password" autocomplete="new-password" required>
+
+    <button type="submit">
+      Submit Form
+    </button>
+
+
+  </form>
+
+  <!-- Footer -->
+  <footer class="login-footer">
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
+    </div>
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B27.jpg">
+    </div>
+  </footer>
+
+</body>
+
+</html>
