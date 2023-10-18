@@ -481,9 +481,11 @@ footer {
     flex-shrink: 0;
     .padding-x(12px);
 
+    // Login Form
     >.login-div {
       border-radius: 210px;
     }
+    // Register Form
     >.register-div {
       border-radius: 316px;
     }
@@ -491,12 +493,16 @@ footer {
     >div {
       background-color: #fbfbfa;
       padding: 40px 225px;
-      
+
+      // Login Form
       >.login-heading {
         margin-left: 5rem;
+        // margin-left: calc(20%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
       }
+      // Register Form
       >.register-heading {
         margin-left: 10rem;
+        // margin-left: calc(40%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
       }
       >.form-heading {
 
@@ -504,7 +510,6 @@ footer {
         font-size: 17px;
         font-weight: 100;
         line-height: 1.5;
-        // margin-bottom: 1rem;
 
           >a {
             color: #6b6969;
@@ -546,9 +551,7 @@ footer {
             }
           }
         }
-        // >:nth-of-type(2) {
-        //   margin-top: 0.5rem;
-        // }
+
         >:last-child {
           width: 100%;
           margin-top: 1.5rem;
@@ -581,48 +584,6 @@ footer {
   }
 }
 
-// Register Form
-// .register-form {
-//   margin-top: 3rem;
-//   margin-bottom: 3rem;
-//   width: 70%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   background-color: #939396;
-//   border-radius: 316px;
-//   padding-top: 70px;
-//   padding-bottom: 70px;
-    
-//   // For Forms (every form field will be of equal height (i.e., no form field will be off double height);
-//   // "flex-direction: row" >>> "flex-wrap: wrap" + Child's "Width: 100%".
-//   // "flex-direction: column" >>> "flex-wrap: no-wrap".
-
-//   >form {
-//     width: 70%;
-//     margin-left: auto;
-//     margin-right: auto;
-//     display: flex;
-//     flex-direction: column;
-//     row-gap: 8px;
-    
-//     >div {
-//       flex-shrink: 0;
-//       display: flex;
-//       flex-wrap: wrap;
-      
-//       >label {
-//         width: 20%;
-//         display: inline-block;
-//       }
-
-//       >input {
-//         display: block;
-//         width: 80%;
-//       }
-//     }
-//   }
-// }
-
 
 
 // Screen Width 0px to 374px
@@ -633,7 +594,7 @@ footer {
     padding-top: 2px;
     padding-bottom: 2px;
   }
-// Login Form
+  // Form (Register, Login, ChangePassword)
 .form-container {
   padding-top: 15px;
   padding-bottom: 14px; 
@@ -645,7 +606,7 @@ footer {
 // Screen Width 375px to 500px
 @media (min-width: 375px) and (max-width: 500px) {
 
-  // Login Form
+  // Form (Register, Login, ChangePassword)
   .form-container {
     padding-top: 37px;
     padding-bottom: 37px;
@@ -745,7 +706,7 @@ footer {
       width: 60px;
     }
   }
-  // Login Form
+  // Form (Register, Login, ChangePassword)
   .form-container>div {
 
     >.login-div, >.register-div {
@@ -907,7 +868,7 @@ footer {
       width: 155px;
     }
   }
-// Login Form
+  // Form (Register, Login, ChangePassword)
 .form-container {
   padding-top: 50px;
   padding-bottom: 51px; 
@@ -928,9 +889,9 @@ footer {
       line-height: 18px;
     }
   }
-  // Login Form
+  // Form (Register, Login, ChangePassword)
   .form-container>div{
-
+    // Login Form
     >.login-div {
       padding: 40px 160px;
       border-radius: 160px;
@@ -940,10 +901,11 @@ footer {
       border-radius: 300px;
     }
     >div {
-
+      // Login Form
       >.login-heading {
         margin-left: 4rem;
       }
+      // Register Form
       >.register-heading {
         margin-left: 11rem;
       }
@@ -963,27 +925,7 @@ footer {
       }
     }
   }
-  // Register Form
-  // .register-form-container>div>div {
-  //   padding: 40px 80px;
-  //   border-radius: 300px;
-
-  //   >.form-heading {
-  //     margin-left: 4rem;
-     
-  //     >p {
-  //       font-size: 12px;
-            
-  //       >a {
-  //         font-size: 12px;
-  //       }
-  //     }
-  //   }
-  //   >.form-fields>:last-child>div>a {
-  //     font-size: 12px;
-  //   }
-
-  // }    
+ 
 }
 
 
@@ -1066,22 +1008,23 @@ footer {
       width: 170px;
     }
   }
-  // Login Form
+  // Form (Register, Login, ChangePassword)
   .form-container {
     padding-top: 131px;
     padding-bottom: 131px;
           
     >div{
-
+      // Register Form
       >.register-div {
         padding: 40px 115px;
         border-radius: 270px;
       }
       >div {
-
+        // Register Form
         >.register-heading {
           margin-left: 12rem;
         }
+        // Login Form
         >.form-heading>p {
         font-size: 11px;
         }
@@ -1126,10 +1069,11 @@ footer {
   header, .products-heading {
     .container(@sm);
   }
-  // Login Form
-  .login-form-container>div>div>.form-fields {
-  
-    >:not(:last-child) {
+  // Form (Register, Login, ChangePassword)
+  .form-container>div>div {
+    
+    // Login Form
+    >.login-fields>:not(:last-child) {
 
       >label {
         width: calc(20%/1.2);  
@@ -1139,18 +1083,14 @@ footer {
         
       }
     }
-  }
-  // Register Form
-  .register-form-container>div>div>.form-fields {
-  
-    >:not(:last-child) {
+    // Register Form
+    >.register-fields>:not(:last-child) {
 
       >label {
         width: calc(40%/1.2);  
       }
       >div {
-        width: calc(80%/1.2);  
-        
+        width: calc(80%/1.2);   
       }
     }
   }
@@ -1176,17 +1116,18 @@ footer {
       width: calc(50%/1.2);
     }
   }
-  // Login Form
+  // Form (Register, Login, ChangePassword)
   .form-container > div > div {
 
     >.register-heading {
       padding-left: 8px;
     }
-
+    // Login Form
     >.login-fields>:last-child {
       max-width: calc(100%/1.2);
       margin-left: calc(20%/1.2);
     }
+    // Register Form
     >.register-fields>:last-child {
       max-width: calc(80%/1.2);
       margin-left: calc(40%/1.2);
@@ -1223,7 +1164,7 @@ footer {
       width: calc(20%/1.2);
     }
   }
-  // Login Form
+  // Form (Register, Login, ChangePassword)// Form (Register, Login, ChangePassword)
   .form-container>div {
     width: calc(100%/1.2);
     margin-left: auto;
@@ -1285,15 +1226,17 @@ footer {
       margin-top: 120px;
     }    
   }
-  // Login Form
+  // Form (Register, Login, ChangePassword)
   .form-container>div>div {
 
+    // Login Form
+    >.login-heading {
+      margin-left: 7rem;
+    }
+    // Register Form
     >.register-heading {
       margin-left: 13rem;
       // margin-left: calc(40%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
-    }
-    >.login-heading {
-      margin-left: 7rem;
     }
   }
 }
