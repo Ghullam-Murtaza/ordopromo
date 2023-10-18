@@ -14,8 +14,8 @@
 
 <body>
   <!-- Navbar -->
-  <header class="login-navbar">
-    <nav class="">
+  <header>
+    <nav>
       <a href="https://ordopromo.fiqsolution.com/products">
         <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON.png" height="30">
       </a>
@@ -28,55 +28,164 @@
         <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-4.png" height="30">
       </a>
       <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-6.png" height="30">
-      <a href="https://ordopromo.fiqsolution.com/user/login" title="Login">
+      <a href="./login.html" title="Login">
         <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-5.png" height="30">
       </a>
     </nav>
   </header>
 
+
+
 <!-- Register Form -->
-  <div class="register-form">
+  <div class="form-container register-form-container">
+    <div>
+      <div class="register-div">
+        
+        <div class="form-heading register-heading">
+          <h1>Register to.</h1>
+          <p>View real time quotations.</p>
+          <p>Save & compare products.</p>
+        </div>
+
+        <form class="form-fields register-fields" action="https://ordopromo.fiqsolution.com/user/register-submit" method="post" target="_self" id="register_form">
+
+          <!-- <input type="hidden" name="_token" value="hxPiu3GlSlxUdorldWsCYf8yc6ouI7QsfqziAukM">
+          <div class="form-group row mb-2">
+            <label for="companyname" class="col-sm-4 col-form-label">Company Name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control register-custom-input " name="company_name" id="company_name" value="" required>
+            </div>
+          </div> -->
+
+          <div>
+            <label for="company_name">Company Name</label>
+            <div>
+              <input type="text" name="company_name" id="company_name" required>
+            </div>
+          </div>
+
+          <div>
+            <label for="position">Position</label>
+            <div>
+              <input type="text" name="position" id="position" required>
+            </div>
+          </div>
+    
+          <div>
+            <label for="fname">First Name</label>
+            <div>
+              <input type="text" name="fname" id="fname" autocomplete="given-name" required>
+            </div>
+          </div>
+        
+          <div>
+            <label for="lname">Last Name</label>
+            <div>
+              <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+            </div>
+          </div>          
+        
+          <div>
+            <label for="register_email">Email</label>
+            <div>
+              <input type="email" name="register_email" id="register_email" autocomplete="email" required>
+            </div>
+          </div>
+        
+          <div>
+            <label for="register_password">Password</label>
+            <div>
+              <input type="password" name="register_password" id="register_password" autocomplete="new-password" required>
+            </div>
+          </div>
+    
+          <div>
+            <label for="register_confirm_password">Confirm Password</label>
+            <div>
+              <input type="password" name="register_confirm_password" id="register_confirm_password" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <div>
+            <button type="submit">Submit Form</button>
+            <div>
+              <a href="./login.html">
+                Already Have Account? Login!
+              </a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- Register Form -->
+  <!-- <div class="register-form">
     <form class="" action="https://ordopromo.fiqsolution.com/user/register-submit" method="post" target="_self" id="register_form">
     
       <div>
         <label for="company_name">Company Name</label>
-        <input type="text" name="company_name" id="company_name" required>
+        <div>
+          <input type="text" name="company_name" id="company_name" required>
+        </div>
       </div>
+
       <div>
         <label for="fname">First Name</label>
-        <input type="text" name="fname" id="fname" autocomplete="given-name" required>
+        <div>
+          <input type="text" name="fname" id="fname" autocomplete="given-name" required>
+        </div>
       </div>
     
       <div>
         <label for="lname">Last Name</label>
-        <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+        <div>
+          <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+        </div>
       </div>
+
       <div>
         <label for="position">Position</label>
-        <input type="text" name="position" id="position" required>
+        <div>
+          <input type="text" name="position" id="position" required>
+        </div>
       </div>
     
       <div>
         <label for="register_email">Email</label>
-        <input type="email" name="register_email" id="register_email" autocomplete="email" required>
+        <div>
+          <input type="email" name="register_email" id="register_email" autocomplete="email" required>
+        </div>
       </div>
     
       <div>
         <label for="register_password">Password</label>
-        <input type="password" name="register_password" id="register_password" autocomplete="new-password" required>
+        <div>
+          <input type="password" name="register_password" id="register_password" autocomplete="new-password" required>
+        </div>
       </div>
+
       <div>
         <label for="register_confirm_password">Confirm Password</label>
-        <input type="password" name="register_confirm_password" id="register_confirm_password" autocomplete="new-password" required>
+        <div>
+          <input type="password" name="register_confirm_password" id="register_confirm_password" autocomplete="new-password" required>
+        </div>
       </div>
+
       <button type="submit">
         Submit Form
       </button>
+
     </form>
-  </div>
+  </div> -->
 
   <!-- Footer -->
-  <footer class="login-footer">
+  <footer class="register-footer">
     <div>
       <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
     </div>
