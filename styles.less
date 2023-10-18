@@ -49,6 +49,12 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  font-size: inherit;
+  line-height: 1.5;
+}
 input {
   display: block;
   width: 100%;
@@ -455,7 +461,7 @@ footer {
   
 }
 
-// Login Footer
+// Login Page's Footer
 .login-footer {
   position: fixed;
   bottom: 0px;
@@ -463,8 +469,8 @@ footer {
   height: 82px;
 }
 
-// Login Form
-.login-form {
+// Form (Register, Login, ChangePassword)
+.form-container {
   padding-top: 69px;
   padding-bottom: 68px;
   display: flex;
@@ -475,34 +481,51 @@ footer {
     flex-shrink: 0;
     .padding-x(12px);
 
+    // Login Form
+    >.login-div {
+      border-radius: 210px;
+    }
+    // Register Form
+    >.register-div {
+      border-radius: 316px;
+    }
+
     >div {
       background-color: #fbfbfa;
-      border-radius: 210px;
       padding: 40px 225px;
 
+      // Login Form
       >.login-heading {
         margin-left: 5rem;
+        // margin-left: calc(20%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
+      }
+      // Register Form
+      >.register-heading {
+        margin-left: 10rem;
+        // margin-left: calc(40%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
+      }
+      >.form-heading {
 
         >p {
         font-size: 17px;
         font-weight: 100;
         line-height: 1.5;
-        margin-bottom: 1rem;
 
-        >a {
-          color: #6b6969;
-          text-decoration: underline;
-        }
+          >a {
+            color: #6b6969;
+            text-decoration: underline;
+          }
         }
       }
       >.form-fields {
         margin-top: 3rem;
 
-        >:nth-of-type(1), >:nth-of-type(2) {
+        >:not(:last-child) {
           display: flex;
           flex-wrap: wrap;
           margin-left: -12px;
           margin-right: -12px;
+          margin-bottom: 0.5rem;
 
           >label {
             width: 100%;
@@ -528,12 +551,11 @@ footer {
             }
           }
         }
-        >:nth-of-type(2) {
-          margin-top: 0.5rem;
-        }
+
         >:last-child {
           width: 100%;
           margin-top: 1.5rem;
+          
 
           >button {
             font-size: 14px;
@@ -563,6 +585,7 @@ footer {
 }
 
 
+
 // Screen Width 0px to 374px
 @media (max-width: (375px - 0.02px)) {
 
@@ -571,8 +594,8 @@ footer {
     padding-top: 2px;
     padding-bottom: 2px;
   }
-// Login Form
-.login-form {
+  // Form (Register, Login, ChangePassword)
+.form-container {
   padding-top: 15px;
   padding-bottom: 14px; 
 }
@@ -583,8 +606,8 @@ footer {
 // Screen Width 375px to 500px
 @media (min-width: 375px) and (max-width: 500px) {
 
-  // Login Form
-  .login-form {
+  // Form (Register, Login, ChangePassword)
+  .form-container {
     padding-top: 37px;
     padding-bottom: 37px;
   }  
@@ -683,28 +706,34 @@ footer {
       width: 60px;
     }
   }
-  // Login Form
-  .login-form>div>div {
-    padding: 30px 50px;
-    border-radius: 110px;
+  // Form (Register, Login, ChangePassword)
+  .form-container>div {
 
-    >.login-heading {
+    >.login-div, >.register-div {
+      padding: 30px 50px;
+      border-radius: 110px;
+    }
+
+    >div {
+      >.login-heading, >.register-heading {
       margin-left: 0px;
       text-align: center;
-      
-      >p {
-        font-size: 9px;
-      
-        >a {
-          font-size: 12px;
+      }  
+      >.form-heading {
+        >p {
+          font-size: 9px;
+        
+          >a {
+            font-size: 12px;
+          }
         }
       }
-    }
-    >.form-fields>:last-child {
-      text-align: center;
-      
-      >div>a {
-        font-size: 12px;
+      >.form-fields>:last-child {
+        text-align: center;
+        
+        >div>a {
+          font-size: 12px;
+        }
       }
     }
   }  
@@ -839,8 +868,8 @@ footer {
       width: 155px;
     }
   }
-// Login Form
-.login-form {
+  // Form (Register, Login, ChangePassword)
+.form-container {
   padding-top: 50px;
   padding-bottom: 51px; 
 }
@@ -860,27 +889,43 @@ footer {
       line-height: 18px;
     }
   }
-  // Login Form
-  .login-form>div>div {
-    padding: 40px 160px;
-    border-radius: 160px;
+  // Form (Register, Login, ChangePassword)
+  .form-container>div{
+    // Login Form
+    >.login-div {
+      padding: 40px 160px;
+      border-radius: 160px;
+    }
+    >.register-div {
+      padding: 40px 80px;
+      border-radius: 300px;
+    }
+    >div {
+      // Login Form
+      >.login-heading {
+        margin-left: 4rem;
+      }
+      // Register Form
+      >.register-heading {
+        margin-left: 11rem;
+      }
 
-    >.login-heading {
-      margin-left: 4rem;
-     
-      >p {
-        font-size: 12px;
-            
-        >a {
+      >.form-heading {
+      
+        >p {
           font-size: 12px;
+              
+          >a {
+            font-size: 12px;
+          }
         }
       }
+      >.form-fields>:last-child>div>a {
+        font-size: 12px;
+      }
     }
-    >.form-fields>:last-child>div>a {
-      font-size: 12px;
-    }
-
-  }  
+  }
+ 
 }
 
 
@@ -963,13 +1008,27 @@ footer {
       width: 170px;
     }
   }
-  // Login Form
-  .login-form {
+  // Form (Register, Login, ChangePassword)
+  .form-container {
     padding-top: 131px;
     padding-bottom: 131px;
           
-    >div>div>.login-heading>p {
-      font-size: 11px;
+    >div{
+      // Register Form
+      >.register-div {
+        padding: 40px 115px;
+        border-radius: 270px;
+      }
+      >div {
+        // Register Form
+        >.register-heading {
+          margin-left: 12rem;
+        }
+        // Login Form
+        >.form-heading>p {
+        font-size: 11px;
+        }
+      }
     }
   }
 }
@@ -1010,10 +1069,11 @@ footer {
   header, .products-heading {
     .container(@sm);
   }
-  // Login Form
-  .login-form>div>div>.form-fields {
-  
-    >:nth-of-type(1), >:nth-of-type(2) {
+  // Form (Register, Login, ChangePassword)
+  .form-container>div>div {
+    
+    // Login Form
+    >.login-fields>:not(:last-child) {
 
       >label {
         width: calc(20%/1.2);  
@@ -1021,6 +1081,16 @@ footer {
       >div {
         width: calc(100%/1.2);  
         
+      }
+    }
+    // Register Form
+    >.register-fields>:not(:last-child) {
+
+      >label {
+        width: calc(40%/1.2);  
+      }
+      >div {
+        width: calc(80%/1.2);   
       }
     }
   }
@@ -1031,7 +1101,7 @@ footer {
 // Medium devices (tablets, 768px and up)
 @media (min-width: @md) { // @md: 768px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .login-form {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
     .container(@md);
   }
   .products-list>div, .cards-list>div {
@@ -1046,10 +1116,23 @@ footer {
       width: calc(50%/1.2);
     }
   }
-  // Login Form
-  .login-form > div > div .form-fields>:last-child {
-    max-width: calc(100%/1.2);
-    margin-left: calc(20%/1.2);
+  // Form (Register, Login, ChangePassword)
+  .form-container > div > div {
+
+    >.register-heading {
+      padding-left: 8px;
+    }
+    // Login Form
+    >.login-fields>:last-child {
+      max-width: calc(100%/1.2);
+      margin-left: calc(20%/1.2);
+    }
+    // Register Form
+    >.register-fields>:last-child {
+      max-width: calc(80%/1.2);
+      margin-left: calc(40%/1.2);
+      padding-left: 8px;
+    }
   }
 
 }
@@ -1059,7 +1142,7 @@ footer {
 // Large devices (desktops, 992px and up)
 @media (min-width: @lg) { // @lg: 992px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .login-form {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
     .container(@lg);
   }
   .products-list>div {
@@ -1081,8 +1164,8 @@ footer {
       width: calc(20%/1.2);
     }
   }
-  // Login Form
-  .login-form>div {
+  // Form (Register, Login, ChangePassword)// Form (Register, Login, ChangePassword)
+  .form-container>div {
     width: calc(100%/1.2);
     margin-left: auto;
     margin-right: auto;
@@ -1094,7 +1177,7 @@ footer {
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: @xl) { // @xl: 1200px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .login-form {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
     .container(@screen-width: @xl);
   }
   .products-list>div {
@@ -1118,7 +1201,7 @@ footer {
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: @xxl) { // @xxl: 1400px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .login-form {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
     .container(@xxl);
   }
   .products-list>div {
@@ -1143,9 +1226,18 @@ footer {
       margin-top: 120px;
     }    
   }
-  // Login Form
-  .login-form>div>div>.login-heading {
-    margin-left: 7rem;
+  // Form (Register, Login, ChangePassword)
+  .form-container>div>div {
+
+    // Login Form
+    >.login-heading {
+      margin-left: 7rem;
+    }
+    // Register Form
+    >.register-heading {
+      margin-left: 13rem;
+      // margin-left: calc(40%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
+    }
   }
 }
 
