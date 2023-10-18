@@ -39,33 +39,22 @@
     <div>
       <div class="login-div">
         <div class="form-heading login-heading">
-          <h1>Log In.</h1>
-          <p>New user create an account. 
-            <a href="./register.html">Register Here</a>
-          </p>
+          <h1>Forgot Password.</h1>
         </div>
-          <form class="form-fields login-fields" method="post" action="https://ordopromo.fiqsolution.com/user/login-submit" target="_self" id="login-form">
-            <!-- <input type="hidden" name="_token" value="cotBE0BUoe2fUOx2QAASdsyB5hyJg6Iy2eBbzIAT"> <input type="hidden"
-              name="cart" id="cart" value="">
-              <input type="hidden" name="catgory_num" id="catgory_num" value="">
-              <input type="hidden" name="category" id="category" value=""> -->
+          <form class="form-fields login-fields forgot-fields" method="post" action="https://ordopromo.fiqsolution.com/user/login-submit" target="_self" id="login-form">
+            <!-- <input type="hidden" name="_token" value="TEl69HliiFszXc6eAt4hGYlkRV0MAzmSV45SuCJL"> -->
             <div>
               <label for="login_email">Email</label>
               <div>
                 <input type="email" name="login_email" id="login_email" autocomplete="email" required>
               </div>
             </div>
+            
             <div>
-              <label for="login_password">Password</label>
+              <button type="submit">Get New Password.</button>
               <div>
-                <input type="password" name="login_password" id="login_password" autocomplete="current-password" required>
-              </div>
-            </div>
-            <div>
-              <button type="submit">Log-In.</button>
-              <div>
-                <a href="./forgot.html">
-                  Forgot your Password? Get it Back!
+                <a href="./login.html">
+                  Login
                 </a>
               </div>
             </div>
