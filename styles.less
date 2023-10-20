@@ -41,6 +41,14 @@ h1 {
   font-weight: 500;
   line-height: 1.2;
 }
+h3 {
+  font-size: calc(1.3rem + .6vw);
+  font-weight: 500;
+  line-height: 1.2;
+}
+h5 {
+  line-height: 1.2;
+}
 img {
   vertical-align: middle;
 }
@@ -99,6 +107,7 @@ header {
   position: -webkit-sticky;   // "Sticky" only works when there is no Parent Element other than 'header' element or
   position: sticky;   //  'Parent's Display Property' is set to 'unset', 'contents', 'initial' or 'inline'
   top: 0;
+  z-index: 999;   // causes the 'Sticky element' to stay above the elements that have 'position: relative'
 
   nav {
     margin-top: 48px;
@@ -462,7 +471,7 @@ footer {
 }
 
 // Login Page's Footer
-.login-footer {
+.footer-fixed {
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -593,6 +602,165 @@ footer {
   }
 }
 
+// Outside Products Page Heading
+.products-heading-outside {
+  margin-top: 1rem;
+  .padding-x(12px);
+}
+
+// Products Filter Container
+.products-filter-container {
+  margin-top: 1rem;
+  .padding-x(12px);
+
+  >div {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    border-radius: 35px;
+    padding: 5px 60px;
+
+    >h3 {
+      display: none;
+      font-weight: 700;
+    }
+    >div {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 8px;
+      row-gap: 8px;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+
+      >.products-filter {
+        height: 28px;
+        width: 153.6px;
+        border: 0px;
+        border-radius: 20px;
+        padding: 0px 20px 0px 8px;
+        position: relative;
+        text-align: left;
+        line-height: 28px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #999;
+        background-color: #fff;
+
+        &::after {
+          content: "";
+          border: solid;
+          border-width: 5px 4px 0px 4px;
+          border-color: #888 transparent transparent transparent;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 7px;
+        }
+      }
+      >.quantity-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1px 16px;
+        background-color: white;
+        border-radius: 35px;
+        padding: 1px 16px;
+
+        >button {
+          border: 0px;
+          padding: 0px;
+        }
+        >div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          >input {
+            height: 20px;
+            width: 65px;
+            min-width: 0px;
+            flex-grow: 1;
+            border: 0px;
+            border-radius: 0px;
+            padding: 0px;
+            text-align: center;
+          }
+        }  
+      }
+    }
+  }
+
+}
+
+// Products Container of Products Page 
+.products-container-pp {
+  margin-top: 1rem;
+  
+  >div {
+    margin: 1rem;
+    .padding-x(12px);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    
+    >.product-card {
+      // In order to have 'column-gap' property to work when 'flex children' are given the 'width' other than 'width: auto', just
+      // 'subtract' the "following formula value" from the 'width' given to 'flex children'. this way 'column-gap' does not cause
+      // the 'flex children' to go on next line and leave 'blank spaces' because there is no space for 'column-gap' when 'width' is
+      // given to 'flex children'. So this way we add the 'column-gap' in the total or 100% width of the 'flex parent'.
+      // Formula;
+      // (row-gap * (no. of columns - 1) / (no. of columns))
+      // where (no. of columns - 1) are the 'no. of gaps between the columns'.
+      // To do;
+      // Make a mixin for this purpose to fully calculate the 'width of flex items'.
+
+      width: calc(50% - (1.5rem * (2 - 1) / (2)));
+      
+      >a {
+        color: inherit;
+
+        >div {
+          border: 1px solid rgba(0,0,0,.125);
+          border-radius: 0.3rem;
+          padding: 0.5rem;
+          background-color: #f8e7ee38;
+          display: flex;
+          flex-direction: column;
+          min-width: 0px;
+          word-wrap: break-word;
+          height: 100%;
+          width: 100%;
+
+          >div:first-of-type {
+
+            >img {
+              width: 100%;
+              border-top-left-radius: calc(0.25rem - 1px);
+              border-top-right-radius: calc(0.25rem - 1px);
+            }
+          }
+          >div:last-of-type {
+            flex-grow: 1;
+            margin-top: 1rem;
+            padding: 1rem;
+            text-align: center;
+
+            >p {
+              font-size: 10px;
+            }
+            >div {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
 
 
 
@@ -609,6 +777,23 @@ footer {
   padding-top: 15px;
   padding-bottom: 14px; 
 }
+  // Products Filter Container
+  .products-filter-container {
+    >div {
+      padding: 2px 20px;
+
+      >div {
+
+        >.products-filter {
+          width: 125px;
+        }
+        >.quantity-filter {
+          padding: 1px 20px;
+        }
+      } 
+    }
+  }
+
 }
 
 
@@ -621,6 +806,29 @@ footer {
     padding-top: 37px;
     padding-bottom: 37px;
   }  
+  // Products Filter Container
+  .products-filter-container>div>div {
+
+    >.products-filter {
+      width: 148px;
+    }
+    >.quantity-filter {
+      padding: 1px 32px;
+    }
+  }  
+}
+
+
+
+// Screen Width 375px to 1023px
+@media (min-width: 375px) and (max-width: 1022.98px) {
+
+  // Products Filter Container
+  .products-filter-container {
+    >div {
+      padding: 5px 25px;
+    }
+  }
 }
 
 
@@ -747,6 +955,12 @@ footer {
       }
     }
   }  
+  // Products Container of Products Page 
+  .products-container-pp {
+    h5 {
+      font-size: 9px;
+    }
+  }
 }
 
 
@@ -758,6 +972,8 @@ footer {
   .brand-merch-section>div>:first-child>p {
     font-size: 11px;
   }
+
+
 }
 
 
@@ -786,15 +1002,29 @@ footer {
       width: 180px;
     }
   }
+  // Products Filter Container
+  .products-filter-container>div>div {
+
+    >.products-filter {
+      font-size: 10px;
+    }
+  } 
 }
 
 
 
+// Screen Width 501px and up
 @media (min-width: 501px) {
 
   // Navbar
   header>nav {
     .padding-x(32px);
+  }
+  // Products Container of Products Page 
+  .products-container-pp {
+    h5 {
+      font-size: 14px;
+    }
   }
 }
 
@@ -815,6 +1045,7 @@ footer {
       padding: 10px 45px;
     }
   }
+
 }
 
 
@@ -879,10 +1110,17 @@ footer {
     }
   }
   // Form (Register, Login, ChangePassword)
-.form-container {
-  padding-top: 50px;
-  padding-bottom: 51px; 
-}
+  .form-container {
+    padding-top: 50px;
+    padding-bottom: 51px; 
+  }
+  // Products Filter Container
+  .products-filter-container>div>div {
+
+    >.products-filter {
+      width: 125px;
+    }
+  }  
 }
 
 
@@ -1104,6 +1342,10 @@ footer {
       }
     }
   }
+  // Products Page Header
+  .products-page-header {
+    max-width: 100%;
+  }
 }
 
 
@@ -1111,7 +1353,8 @@ footer {
 // Medium devices (tablets, 768px and up)
 @media (min-width: @md) { // @md: 768px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
+          .products-page-header, .products-filter-container, .products-container-pp {
     .container(@md);
   }
   .products-list>div, .cards-list>div {
@@ -1144,6 +1387,22 @@ footer {
       padding-left: 8px;
     }
   }
+  // Outside Products Heading
+  .products-heading-outside {
+    display: none;
+  }
+  // Products Filter Container
+  .products-filter-container>div>h3 {
+
+    display: block;
+  }
+  // Products Container of Products Page 
+  .products-container-pp>div {
+    
+    >.product-card {
+      width: calc((40%/1.2) - (1.5rem * (3 - 1) / (3)));
+    }
+}
 
 }
 
@@ -1152,7 +1411,8 @@ footer {
 // Large devices (desktops, 992px and up)
 @media (min-width: @lg) { // @lg: 992px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
+          .products-page-header, .products-filter-container, .products-container-pp {
     .container(@lg);
   }
   .products-list>div {
@@ -1180,6 +1440,13 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+  // Products Container of Products Page 
+  .products-container-pp>div {
+    
+  >.product-card {
+    width: calc((30%/1.2) - (1.5rem * (4 - 1) / (4)));    
+  }
+}
 }
 
 
@@ -1187,7 +1454,8 @@ footer {
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: @xl) { // @xl: 1200px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
+          .products-page-header, .products-filter-container, .products-container-pp {
     .container(@screen-width: @xl);
   }
   .products-list>div {
@@ -1204,6 +1472,9 @@ footer {
   h1{
     font-size: 2.5rem;
   }
+  h3 {
+    font-size: 1.75rem;
+  }
 }
 
 
@@ -1211,7 +1482,8 @@ footer {
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: @xxl) { // @xxl: 1400px;
 
-  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container {
+  header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
+          .products-page-header, .products-filter-container, .products-container-pp {
     .container(@xxl);
   }
   .products-list>div {
