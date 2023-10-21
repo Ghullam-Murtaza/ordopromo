@@ -81,6 +81,17 @@ input {
   outline: none;
   transition: .15s;
 }
+// Removing 'Arrows' or 'Spin Buttons' from 'number picker input element (input element with type="number")'
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 button {
   display: inline-block;
   font-weight: 400;
@@ -627,8 +638,8 @@ footer {
     >div {
       display: flex;
       flex-wrap: wrap;
-      column-gap: 8px;
-      row-gap: 8px;
+      column-gap: 4px;
+      row-gap: 4px;
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;
 
@@ -685,6 +696,10 @@ footer {
             border-radius: 0px;
             padding: 0px;
             text-align: center;
+
+            &:focus {
+              box-shadow: 0 0 0 0.25rem #ced4da;
+            }
           }
         }  
       }
