@@ -613,14 +613,14 @@ footer {
   }
 }
 
-// Outside Products Page Heading
-.products-heading-outside {
+// Products Heading Outer on Products Page
+.products-heading-outer-pp {
   margin-top: 1rem;
   .padding-x(12px);
 }
 
-// Products Filter Container
-.products-filter-container {
+// Products Filter Container on Products Page
+.products-filter-container-pp {
   margin-top: 1rem;
   .padding-x(12px);
 
@@ -643,7 +643,7 @@ footer {
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;
 
-      >.products-filter {
+      >.products-filter-pp{
         height: 28px;
         width: 153.6px;
         border: 0px;
@@ -669,7 +669,7 @@ footer {
           right: 7px;
         }
       }
-      >.quantity-filter {
+      >.quantity-filter-pp {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -708,7 +708,7 @@ footer {
 
 }
 
-// Products Container of Products Page 
+// Products Container on Products Page 
 .products-container-pp {
   margin-top: 1rem;
   
@@ -721,7 +721,7 @@ footer {
     row-gap: 1.5rem;
     column-gap: 1.5rem;
     
-    >.product-card {
+    >.product-card-pp {
       // In order to have 'column-gap' property to work when 'flex children' are given the 'width' other than 'width: auto', just
       // 'subtract' the "following formula value" from the 'width' given to 'flex children'. this way 'column-gap' does not cause
       // the 'flex children' to go on next line and leave 'blank spaces' because there is no space for 'column-gap' when 'width' is
@@ -788,21 +788,21 @@ footer {
     padding-bottom: 2px;
   }
   // Form (Register, Login, ChangePassword)
-.form-container {
-  padding-top: 15px;
-  padding-bottom: 14px; 
-}
-  // Products Filter Container
-  .products-filter-container {
+  .form-container {
+    padding-top: 15px;
+    padding-bottom: 14px; 
+  }
+  // Products Filter Container on Products Page
+  .products-filter-container-pp {
     >div {
       padding: 2px 20px;
 
       >div {
 
-        >.products-filter {
+        >.products-filter-pp{
           width: 125px;
         }
-        >.quantity-filter {
+        >.quantity-filter-pp {
           padding: 1px 20px;
         }
       } 
@@ -821,13 +821,13 @@ footer {
     padding-top: 37px;
     padding-bottom: 37px;
   }  
-  // Products Filter Container
-  .products-filter-container>div>div {
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>div {
 
-    >.products-filter {
+    >.products-filter-pp{
       width: 148px;
     }
-    >.quantity-filter {
+    >.quantity-filter-pp {
       padding: 1px 32px;
     }
   }  
@@ -838,8 +838,8 @@ footer {
 // Screen Width 375px to 1023px
 @media (min-width: 375px) and (max-width: 1022.98px) {
 
-  // Products Filter Container
-  .products-filter-container {
+  // Products Filter Container on Products Page
+  .products-filter-container-pp {
     >div {
       padding: 5px 25px;
     }
@@ -970,7 +970,7 @@ footer {
       }
     }
   }  
-  // Products Container of Products Page 
+  // Products Container on Products Page 
   .products-container-pp {
     h5 {
       font-size: 9px;
@@ -1017,10 +1017,10 @@ footer {
       width: 180px;
     }
   }
-  // Products Filter Container
-  .products-filter-container>div>div {
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>div {
 
-    >.products-filter {
+    >.products-filter-pp{
       font-size: 10px;
     }
   } 
@@ -1035,7 +1035,7 @@ footer {
   header>nav {
     .padding-x(32px);
   }
-  // Products Container of Products Page 
+  // Products Container on Products Page 
   .products-container-pp {
     h5 {
       font-size: 14px;
@@ -1129,10 +1129,10 @@ footer {
     padding-top: 50px;
     padding-bottom: 51px; 
   }
-  // Products Filter Container
-  .products-filter-container>div>div {
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>div {
 
-    >.products-filter {
+    >.products-filter-pp{
       width: 125px;
     }
   }  
@@ -1357,8 +1357,8 @@ footer {
       }
     }
   }
-  // Products Page Header
-  .products-page-header {
+  // Header (Products Page
+  .header-pp {
     max-width: 100%;
   }
 }
@@ -1369,7 +1369,7 @@ footer {
 @media (min-width: @md) { // @md: 768px;
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
-          .products-page-header, .products-filter-container, .products-container-pp {
+          .header-pp, .products-filter-container-pp, .products-container-pp {
     .container(@md);
   }
   .products-list>div, .cards-list>div {
@@ -1403,18 +1403,18 @@ footer {
     }
   }
   // Outside Products Heading
-  .products-heading-outside {
+  .products-heading-outer-pp {
     display: none;
   }
-  // Products Filter Container
-  .products-filter-container>div>h3 {
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>h3 {
 
     display: block;
   }
-  // Products Container of Products Page 
+  // Products Container on Products Page 
   .products-container-pp>div {
     
-    >.product-card {
+    >.product-card-pp {
       width: calc((40%/1.2) - (1.5rem * (3 - 1) / (3)));
     }
 }
@@ -1427,7 +1427,7 @@ footer {
 @media (min-width: @lg) { // @lg: 992px;
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
-          .products-page-header, .products-filter-container, .products-container-pp {
+          .header-pp, .products-filter-container-pp, .products-container-pp {
     .container(@lg);
   }
   .products-list>div {
@@ -1455,10 +1455,10 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
-  // Products Container of Products Page 
+  // Products Container on Products Page 
   .products-container-pp>div {
     
-  >.product-card {
+  >.product-card-pp {
     width: calc((30%/1.2) - (1.5rem * (4 - 1) / (4)));    
   }
 }
@@ -1470,7 +1470,7 @@ footer {
 @media (min-width: @xl) { // @xl: 1200px;
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
-          .products-page-header, .products-filter-container, .products-container-pp {
+          .header-pp, .products-filter-container-pp, .products-container-pp {
     .container(@screen-width: @xl);
   }
   .products-list>div {
@@ -1498,7 +1498,7 @@ footer {
 @media (min-width: @xxl) { // @xxl: 1400px;
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
-          .products-page-header, .products-filter-container, .products-container-pp {
+          .header-pp, .products-filter-container-pp, .products-container-pp {
     .container(@xxl);
   }
   .products-list>div {
