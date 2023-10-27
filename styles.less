@@ -1060,12 +1060,10 @@ footer {
 
     >div:not(.active) {
       display: none;
-      opacity: 0;
-      transition: opacity 1s;
     }
     >div {
-      transition: opacity 1s;
       .padding-x(12px);
+      animation: fadeEffect 1s;
     }
     >.product-details {
       
@@ -1117,11 +1115,14 @@ footer {
           }
         }
       }
-    }
-    
+    }    
   }
 }
-
+// Fade In Animation
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 // How to Order
 .how-to-order{
   margin-top: 3rem;
