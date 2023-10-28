@@ -684,6 +684,12 @@ footer {
           }
         }
         // Dropdown Menu on 'Products Page'
+        >div:not(.active) {
+          display: none;
+        }
+        >div {
+          animation: fadeEffect 0.15s;
+        }
         >.dropdown-menu-pp {
           position: absolute;
           top: 29px;

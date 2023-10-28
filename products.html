@@ -9,7 +9,9 @@
   <!-- Less (CSS Preprocessor) -->
   <link rel="stylesheet/less" type="text/css" href="styles.less" />
   <script src="https://cdn.jsdelivr.net/npm/less"></script>
-
+  
+  <!-- Javascript -->
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -52,9 +54,9 @@
         </select> -->
 
         <div class="dropdown-pp">
-          <button class="products-filter-pp dropdown-button-pp">Branding.</button>
+          <button class="products-filter-pp dropdown-button-pp" id="branding-filter" aria-label="branding-filter">Branding.</button>
 
-          <div class="dropdown-menu-pp">
+          <div class="dropdown-menu-pp active" id="branding-filter-menu" aria-labelledby="branding-filter">
             <div>
               <input type="search" aria-label="Search">
             </div>
@@ -66,9 +68,9 @@
         </div>
 
         <div class="dropdown-pp">
-          <button class="products-filter-pp dropdown-button-pp">Color.</button>
+          <button class="products-filter-pp dropdown-button-pp" id="color-filter" aria-label="color-filter">Color.</button>
 
-          <div class="dropdown-menu-pp">
+          <div class="dropdown-menu-pp" id="color-filter-menu" aria-labelledby="color-filter">
             <div>
               <input type="search" aria-label="Search">
             </div>
@@ -90,9 +92,9 @@
         
 
         <div class="dropdown-pp">
-          <button class="products-filter-pp dropdown-button-pp">Sort By.</button>
+          <button class="products-filter-pp dropdown-button-pp" id="sort-by-filter" aria-label="sort-by-filter">Sort By.</button>
 
-          <div class="dropdown-menu-pp">
+          <div class="dropdown-menu-pp" id="sort-by-filter-menu" aria-labelledby="sort-by-filter">
             <div>
               <input type="search" aria-label="Search">
             </div>
