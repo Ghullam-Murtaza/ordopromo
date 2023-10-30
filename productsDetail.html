@@ -24,7 +24,7 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script> -->
 
   <!-- Javascript -->
-  <script src="./script.js" defer></script>
+  <script src="./productsDetail.js" defer></script>
   
 </head>
 
@@ -214,9 +214,9 @@
 
           <div class="add-button">
             <div class="quantity-filter quantity-filter-pdp">
-              <button>-</button>
-              <div><input type="number" name="quantity-input-pp" value="0" min="0" maxlength="4"></div>
-              <button>+</button>
+              <button id="decrement-pdp">-</button>
+              <div><input type="number" name="quantity-input-pdp" value="0" min="0" maxlength="4" id="quantity-input-pdp"></div>
+              <button id="increment-pdp">+</button>
             </div>
             
             <div>
@@ -234,13 +234,13 @@
     <div class="horizontal-line"></div>
     <!-- Tabs -->
     <div class="description-tabs">
-      <button type="button" class="tab" id="details-tab">DETAILS</button>
+      <button type="button" class="tab active" id="details-tab">DETAILS</button>
       <button type="button" class="tab" id="logo-tab">LOGO</button>
-      <button type="button" class="tab active" id="stock-tab">STOCK</button>
+      <button type="button" class="tab" id="stock-tab">STOCK</button>
     </div>
     <!-- Tabs Content -->
     <div class="product-description">
-      <div class="product-details tab-contents" id="details-tab-content" aria-labelledby="details-tab">
+      <div class="product-details tab-contents active" id="details-tab-content" aria-labelledby="details-tab">
         <h5>Details.</h5>
         <p>BPA-free 800ml drink bottle that is manufactured from food grade polyethylene. It has a reliable screw on lid with a leak-resistant sipper mechanism. The bottle and lid can be mixed and matched in any colour combination from the standard colours at no extra cost. This product is not dishwasher safe and handwashing is recommended.</p>
         <h5>Colours.</h5>
@@ -253,7 +253,7 @@
         <p><b>Carton Dimensions: </b>56 cm x 39 cm x 75 cm</p>
         <p><b>Carton Weight: </b>7.30kg</p>
       </div>
-      <div class="product-stock tab-contents active" id="stock-tab-content" aria-labelledby="stock-tab">
+      <div class="product-stock tab-contents" id="stock-tab-content" aria-labelledby="stock-tab">
         <h5>Stock.</h5>
         <p>Bottles are made to order for any quantity required. Lid stock can be made to order within 4 weeks.</p>
         <h5>Item.</h5>
