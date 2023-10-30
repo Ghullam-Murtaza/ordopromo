@@ -60,17 +60,16 @@ dropdownButtons.forEach(dropBtn => {
 
     // (i)  If the "Clicked" 'Dropdown Menu' is already Open
     if (clickedMenu.classList.contains("active")) {
-      console.log("clicked menu");
-      // Toggle the '.active Class' of Clicked 'Dropdown Menu'
-      clickedMenu.classList.toggle("active");
+      // Remove the '.active Class' of Clicked 'Dropdown Menu'
+      clickedMenu.classList.remove("active");
       return;
     }
 
     // (ii)  If the "Clicked" 'Dropdown Menu' is already Close
     // 1) Close already Opened 'Dropdown Menu' (if any)
     closeDropdownMenus();
-    // 2) Toggle the '.active Class' of Clicked 'Dropdown Menu'
-    clickedMenu.classList.toggle("active"); 
+    // 2) Add the '.active Class' to Clicked 'Dropdown Menu'
+    clickedMenu.classList.add("active"); 
     
   })
 });
@@ -106,5 +105,7 @@ const closeDropdownMenus = () => {
 
 
 // To Do;
+
+// Attach image thumbnails to owl-slider in productsDetail.html and enable navigation buttons and arrows on owl-slider carousel
 
 // Make a general purpose function for opening or showing items of dropdown or tabs
