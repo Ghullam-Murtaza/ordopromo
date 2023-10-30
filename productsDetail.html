@@ -12,7 +12,7 @@
 
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-  <!-- <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"> -->
+  <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"> -->
 
   <!-- jQuery (do not use "defer" here as it causes the "owl crousel" and its items to not show at all)-->
@@ -61,24 +61,45 @@
   <!-- Products Selection Container -->
   <div class="products-selection-container">
     <div>
-      <!-- Owl Carousel -->
-      <div class="owl-carousel products-carousel">
 
-        <div class="carousel-img-pdp">
-          <p>Main</p>
-          <img src="https://trends.nz/resizer/470/100166-0.jpg" alt="Main" class="slider_image" width="100%" height="100%">
+      <!-- Owl Carousel outer container ( to make the actual 'Owl Carousel's Height not equal to 
+           the right Column (".products-variation"). as the 'items or columns' of a 'flex box' have equal Height if their
+           height is set to 'auto' (which is default)) -->
+      <div>
+        <!-- Owl Carousel -->
+        <div class="owl-carousel owl-theme products-carousel">
+          <!-- 'data-hash' to show these 'divs of images' when the 'images' of the '.color-selection' are 'clicked' -->
+          <div class="carousel-img-pdp" data-hash="main">
+            <p>Main</p>
+            <img src="https://trends.nz/resizer/470/100166-0.jpg" alt="Main" class="slider-image" width="100%" height="100%">
+          </div>
+          
+          <div class="carousel-img-pdp" data-hash="silver">
+            <p>Silver</p>
+            <img src="https://trends.nz/resizer/470/100166-1.jpg" alt="Silver" class="slider-image" width="100%" height="100%" loading="lazy">
+          </div>
+          
+          <div class="carousel-img-pdp" data-hash="frosted">
+            <p>Frosted Clear</p>
+            <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" class="slider-image" width="100%" height="100%" loading="lazy">
+          </div>
+          
+          <div class="carousel-img-pdp" data-hash="white">
+            <p>White</p>
+            <img src="https://trends.nz/resizer/470/100166-3.jpg" alt="White" class="slider-image" width="100%" height="100%" loading="lazy">
+          </div>
+          
+          <div class="carousel-img-pdp" data-hash="yellow">
+            <p>Yellow</p>
+            <img src="https://trends.nz/resizer/470/100166-4.jpg" alt="Yellow" class="slider-image" width="100%" height="100%" loading="lazy">
+          </div>
+
+          <div class="carousel-img-pdp" data-hash="orange">
+            <p>Orange</p>
+            <img src="https://trends.nz/resizer/470/100166-5.jpg" alt="Orange" class="slider-image" width="100%" height="100%" loading="lazy">
+          </div>
+
         </div>
-
-        <div class="carousel-img-pdp">
-          <p>Main</p>
-          <img src="https://trends.nz/resizer/470/100166-0.jpg" alt="Main" class="slider_image" width="100%" height="100%" loading="lazy">
-        </div>
-
-        <div class="carousel-img-pdp">
-          <p>Main</p>
-          <img src="https://trends.nz/resizer/470/100166-0.jpg" alt="Main" class="slider_image" width="100%" height="100%" loading="lazy">
-        </div>
-
       </div>
 
       <!-- Products Variation -->
@@ -87,59 +108,51 @@
         <h2>AD Labels 40 x 20mm</h2>
         <h6>Colours.</h6>
         <div class="color-selection">
-
+          <!-- 'href' to link them with the 'image' of the 'owl carousel' -->
           <div>
-            <button>
-              <p>Main.</p>
-              <img src="https://trends.nz/resizer/470/100166-0.jpg" alt="Products' Main Image" width="70" height="60">
-            </button>
+            <a href="#main">
+                <p>Main.</p>
+                <img src="https://trends.nz/resizer/470/100166-0.jpg" alt="Main" width="100%" height="100%">
+            </a>
           </div>
 
           <div>
-            <button>
-              <p>Silver.</p>
-              <img src="https://trends.nz/resizer/470/100166-1.jpg" alt="Silver" width="60" height="70">
-            </button>
+            <a href="#silver">
+                <p>Silver.</p>
+                <img src="https://trends.nz/resizer/470/100166-1.jpg" alt="Silver" width="100%" height="100%">
+            </a>
           </div>
 
           <div>
-            <button>
-              <p>Frosted Clear.</p>
-              <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="60" height="70">
-            </button>
-          </div>
-          <div>
-            <button>
-              <p>Frosted Clear.</p>
-              <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="60" height="70">
-            </button>
-          </div>
-          <div>
-            <button>
-              <p>Frosted Clear.</p>
-              <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="60" height="70">
-            </button>
-          </div>
-          <div>
-            <button>
-              <p>Frosted Clear.</p>
-              <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="60" height="70">
-            </button>
-          </div>
-          <div>
-            <button>
-              <p>Frosted Clear.</p>
-              <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="60" height="70">
-            </button>
-          </div>
-          <div>
-            <button>
-              <p>Frosted Clear.</p>
-              <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="60" height="70">
-            </button>
+            <a href="#frosted">
+                <p>Frosted Clear.</p>
+                <img src="https://trends.nz/resizer/470/100166-2.jpg" alt="Frosted Clear" width="100%" height="100%">
+            </a>
           </div>
 
+          <div>
+            <a href="#white">
+                <p>White.</p>
+                <img src="https://trends.nz/resizer/470/100166-3.jpg" alt="White" width="100%" height="100%">
+            </a>
+          </div>
+
+          <div>
+            <a href="#yellow">
+                <p>Yellow.</p>
+                <img src="https://trends.nz/resizer/470/100166-4.jpg" alt="Yellow" width="100%" height="100%">
+            </a>
+          </div>
+
+          <div>
+            <a href="#orange">
+                <p>Orange.</p>
+                <img src="https://trends.nz/resizer/470/100166-5.jpg" alt="Orange" width="100%" height="100%">
+            </a>
+          </div>
+          
         </div>
+
         <h6>Decorations.</h6>
         <div class="decoration-selection">
           
@@ -402,9 +415,10 @@
     $(document).ready(function(){
       // Owl Carousel
       $('.owl-carousel').owlCarousel({
-        // margin:10,
-        loop:true,
         items: 1,
+        loop:true,
+        nav:true,
+        URLhashListener:true,
       })
 
       
