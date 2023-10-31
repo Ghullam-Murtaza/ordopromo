@@ -44,35 +44,42 @@ tabs.forEach(tab => {
   });
 });
 
-// ############################################## Product Description Tabs (pdp) ##############################################
+// ######################################### Products Quantity Filter or Selector (pdp) ########################################
 const decProductsPdp = document.querySelector("#decrement-pdp");
 const incrProductsPdp = document.querySelector("#increment-pdp");
 const productsQuantityPdp = document.querySelector("#quantity-input-pdp");
 
-// Unary plus operator (+) to convert a value into 'number' (if it is not already of type 'number')
-let numericValue = +productsQuantityPdp.value;
-
+// Unary plus operator (+) to convert a value into 'number' (if it is not already of type 'number') (input fields' value are
+                                                                                                        // of type 'string')
+let numValuePdp = +productsQuantityPdp.value;
+console.log(numValuePdp);
 
 
 // Function to "Decrease Product's Count"
 decProductsPdp.addEventListener("click", function() {
   
-  // (i) if the 'input field's value is already 'zero' then do not "decrease" its value
-  if (numericValue <= 0 ) {
+  // (i) if the 'input field's value is already 'zero' or a 'negative value' (for any reason) then do not "decrease" its value
+  if (numValuePdp <= 0 ) {
     return;
   }
   // (ii) if the 'input field's value is greater than 'zero' then "decrease" its value
-  productsQuantityPdp.value = --numericValue;
+  productsQuantityPdp.value = --numValuePdp;
 })
 
 // Function to "Increase Product's Count"
 incrProductsPdp.addEventListener("click", function() {
   
-  productsQuantityPdp.value = ++numericValue;
+  productsQuantityPdp.value = ++numValuePdp;
 
-  // console.log('increased products count. Type is: ' + typeof numericValue + ' , Value: ' + numericValue);
+  // console.log('increased products count. Type is: ' + typeof numValuePdp + ' , Value: ' + numValuePdp);
   // console.log('increased products count. Type is: ' + typeof productsQuantityPdp.value + ' , Value: ' + productsQuantityPdp.defaultValue);
 
   // this method also changes 'defaultValue' of 'number field'
   // productsQuantityPdp.setAttribute("value", `${++productsQuantityPdp.value}`)
+})
+
+productsQuantityPdp.addEventListener("change", function() {
+  // when 'number field's value is manually updated, update the 'numValuePdp' variable to have the latest value, so the 'plus'
+  // and 'minus' operations can have the latest 'value' of 'numValuePdp' variable to operate on.
+  numValuePdp = +productsQuantityPdp.value;
 })
