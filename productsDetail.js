@@ -50,7 +50,7 @@ const plusButtonPdp = document.querySelector("#increment-pdp");
 const productsQuantityField = document.querySelector("#quantity-input-pdp");
 const productsQuantitySlider = document.querySelector("#products-quantity-slider");
 
-const minQuantity = 0;
+const minQuantity = 100;
 const maxQuantity = 5000;
 
 // Unary plus operator (+) to convert a value into 'number' (if it is not already of type 'number') (input fields' value are
@@ -104,14 +104,12 @@ function getSliderValue() {
 
 // Function to Calculate Total Price of Items
 function calculateTotalPrice() {
-  // Get 'Products Quantity' that is selected using 'productsQuantitySlider' (Slider)
-  sliderProductsQuantity = getSliderValue().quantity;
+
 
   // Get 'Products Quantity' that is selected using 'productsQuantityField' (Input Field)
   fieldProductsQuantity = +productsQuantityField.value;
 
-  // Calculate 'Total Quantity'
-  totalQuantity = sliderProductsQuantity + fieldProductsQuantity;
+  
 
   // Get 'Unit Price' from 'quantityUnitPrice'
   // Calculate 'Unit Price' using Products 'Total Quantity' and 'Unit Price'
@@ -124,10 +122,37 @@ function calculateTotalPrice() {
   totalPrice = unitPrice * productsCountPdp;
 }
 
-// Function to Calculate and Update 'unitPrice' and 'totalPrice' when value of 'productsQuantitySlider' is changed
-productsQuantitySlider.addEventListener("change", function() {
 
-}) 
+
+// Function to Update Slider value ('productsQuantitySlider.value') using value of 'productsQuantityField' is changed
+function fieldToSliderValue() {
+  // if (+productsQuantityField.value >= quantityUnitPrice.sliderPos[x].quantity && +productsQuantityField.value <= quantityUnitPrice.sliderPos[x + 1].quantity) {
+    // productsQuantitySlider.value = quantityUnitPrice.sliderPos[x].quantity;
+  // }
+  // else if () {
+
+  // }
+}
+
+
+
+// Function to Update input field value ('productsQuantityField.value') when value of 'productsQuantitySlider' is changed
+productsQuantitySlider.addEventListener("change", function() {
+  // Update input field value ('productsQuantityField.value') using value of 'productsQuantitySlider'
+  sliderToFieldValue();
+
+  enableDisableButton(minusButtonPdp);
+  enableDisableButton(plusButtonPdp); 
+})
+
+// Function to Update input field value ('productsQuantityField.value') using value of 'productsQuantitySlider'
+function sliderToFieldValue() {
+  // Get 'Products Quantity' that is selected using 'productsQuantitySlider' (Slider)
+  sliderProductsQuantity = getSliderValue().quantity;
+
+  // Update input field value ('productsQuantityField.value') and 'productsCountPdp'
+  productsQuantityField.value = productsCountPdp = sliderProductsQuantity;
+}
 
 
 
@@ -151,13 +176,13 @@ minusButtonPdp.addEventListener("click", function() {
 // Function to "Increase Product's Count"
 plusButtonPdp.addEventListener("click", function() {
   // if "productsCountPdp" is less than 'maxQuantity', then 'increment' it. And when it becomes 'maxQuantity', 'Disable' the 'plus button'
-  productsQuantityField.value = productsCountPdp < minQuantity && ++productsCountPdp;
+  productsQuantityField.value = productsCountPdp < maxQuantity && ++productsCountPdp;
   
   enableDisableButton(plusButtonPdp);
   enableDisableButton(minusButtonPdp);
   
   // Old Code
-  // productsQuantityField.value = productsCountPdp < minQuantity ? ++productsCountPdp : toast("increment", productsCountPdp);
+  // productsQuantityField.value = productsCountPdp < maxQuantity ? ++productsCountPdp : toast("increment", productsCountPdp);
   
   // you can also get the 'latest value' of 'productsQuantityField' inside 'increment and decrement' functions before updating
   // "productsCountPdp" and assigning to the "productsQuantityField.value". so you do not have to have function to update "productsCountPdp"
@@ -175,8 +200,9 @@ productsQuantityField.addEventListener("change", function() {
   // when 'number field's value is manually updated, update the 'productsCountPdp' variable to have the latest value, so the 'plus'
   // and 'minus' operations can have the latest 'value' of 'productsCountPdp' variable to operate on.
   
-  if (minQuantity <= +productsQuantityField.value && +productsQuantityField.value <= minQuantity) {
+  if (minQuantity <= +productsQuantityField.value && +productsQuantityField.value <= maxQuantity) {
     productsCountPdp = +productsQuantityField.value;
+    console.log('field value changed.' + productsQuantityField.value);
   }
   else if (+productsQuantityField.value < minQuantity) {
     toast("decrement");
@@ -185,7 +211,7 @@ productsQuantityField.addEventListener("change", function() {
   }                    
   else if (+productsQuantityField.value > maxQuantity){
     toast("increment");
-    productsQuantityField.value = productsCountPdp = minQuantity;
+    productsQuantityField.value = productsCountPdp = maxQuantity;
   }                                               
   
   enableDisableButton(minusButtonPdp);
@@ -204,11 +230,11 @@ function enableDisableButton(buttonType) {
   if (buttonType.id === plusButtonPdp.id) {
 
     // Disable the 'button' when it is already 'enabled' and "productsCountPdp" is equal to 'maxQuantity'
-    if (buttonType.disabled === false && productsCountPdp === minQuantity) {
+    if (buttonType.disabled === false && productsCountPdp === maxQuantity) {
       buttonType.disabled = true;
     }
     // Enable the 'button' when it is already 'disabled' and "productsCountPdp" is less than 'maxQuantity'
-    else if (buttonType.disabled && productsCountPdp < minQuantity) {
+    else if (buttonType.disabled && productsCountPdp < maxQuantity) {
       buttonType.disabled = false;
     }
   }
@@ -240,3 +266,10 @@ function toast(infoAbout, variableToReturn) {
   // Then return the old value of "productsCountPdp" to assign to "productsCountPdp" 
   // return variableToReturn;
 }
+
+
+
+
+
+// ************************** Calling Functions on Page Load **************************
+sliderToFieldValue();
