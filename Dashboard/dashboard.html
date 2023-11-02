@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Less (CSS Preprocessor) -->
+  <link rel="stylesheet/less" type="text/css" href="../styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
+
+  <!-- Javascript -->
+  <script src="./dashboard.js" defer></script>
+  
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!-- Header (Dashboard Page) -->
+  <header class="header-pp">
+    <nav>
+      <a href="./products.html">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON.png" height="30">
+      </a>
+      <a href="./">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-2.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-1.png" height="30">
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B28.png" height="70" width="500" class="logo">
+      <a href="#search">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-4.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-6.png" height="30">
+      <a href="./login.html" title="Login">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-5.png" height="30">
+      </a>
+    </nav>
+  </header>
+
+  <!-- Top Heading Container -->
+  <div class="top-heading">
+    <div>
+      <h3>Order Dashboard</h3>
+    </div>
+  </div>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+
+    <div class="filter-and-search">
+      
+      <div class="filter-length">
+        <label for="table-length">Show</label>
+        <select name="tableLength" id="table-length">
+          <option value="10" selected>10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        <label for="table-length">enteries</label>
+      </div>
+
+      <div class="search-order">
+        <label for="search-order">Search:</label>
+        <input type="search" name="searchOrder" id="search-order">
+      </div>
+
+    </div>
+
+    <table class="dashboard-table">
+      <thead>
+        <tr>
+          <th class="sorting sorting-asc" aria-label="Serial Number: ">
+            Sr.No
+          </th>
+          <th class="sorting sorting-desc" aria-label="Order Number: ">
+            Order #
+          </th>
+          <th class="sorting" aria-label="Order Date: ">
+            Order Date
+          </th>
+          <th class="sorting" aria-label="Delivery Date: ">
+            Delivery Date
+          </th>
+          <th class="sorting" aria-label="Total Products: ">
+            Total Products
+          </th>
+          <th class="sorting" aria-label="Total Amount: ">
+            Total Amount
+          </th>
+          <th class="sorting" aria-label="Order Status: ">
+            Order Status
+          </th>
+          <th class="sorting" aria-label="Artwork Status: ">
+            Artwork Status
+          </th>
+          <th class="sorting" aria-label="Action: ">
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>2023-10-30</td>
+          <td></td>
+          <td>1</td>
+          <td>$0.00</td>
+          <td>
+            <span class="badge order-status">Cancelled</span>
+          </td>
+          <td>
+            <span class="badge artwork-status">Pending</span>
+          </td>
+          <td>
+            <a href="#" class="action">View Details</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="dashboard-pagination">
+      
+      <div class="table-length-info">
+        Showing 1 to 1 of 1 entries
+      </div>
+
+      <div class="pagination-buttons">
+        <button type="button" class="previous-button" disabled>Previous</button>
+        <button type="button" class="page-number">1</button>
+        <button type="button" class="next-button" disabled>Next</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer-fixed">
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
+    </div>
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B27.jpg">
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
