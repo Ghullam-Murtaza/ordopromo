@@ -1,0 +1,743 @@
+// Screen Width 0px to 374px
+@media (max-width: (375px - 0.02px)) {
+
+  // Navbar
+  header>nav {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  // Form (Register, Login, ChangePassword)
+  .form-container {
+    padding-top: 15px;
+    padding-bottom: 14px; 
+  }
+  // Products Filter Container on Products Page
+  .products-filter-container-pp {
+    >div {
+      padding: 2px 20px;
+
+      >div {
+
+        .dropdown-pp {
+
+          >.products-filter-pp{
+            width: 125px;
+          }
+        }  
+      } 
+    }
+  }
+// Products Quantity Input (-, input, +) on Products and ProductsDetail Pages
+  .quantity-filter {
+    padding: 1px 20px;
+  }
+  
+  // Top Heading Container
+  .top-heading>div {
+    .padding-x(25px);
+  }
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>.products-variation>.decoration-selection{
+  
+    >div:not(:first-child) > label {
+      padding: 3px 7px;
+    }
+  }
+  // Product Description on (Products Detail Page)
+  .product-description-section>.description-tabs>button {
+
+    padding: 3px 10px;    
+  }
+
+}
+
+
+
+// Screen Width 375px to 500px
+@media (min-width: 375px) and (max-width: 500px) {
+
+  // Form (Register, Login, ChangePassword)
+  .form-container {
+    padding-top: 37px;
+    padding-bottom: 37px;
+  }  
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>div {
+
+    .dropdown-pp {
+      
+      >.products-filter-pp{
+        width: 148px;
+      }
+    }  
+  }  
+
+
+  // Products Quantity Input (-, input, +) on Products and ProductsDetail Pages
+  .quantity-filter {
+    padding: 1px 32px;
+  }
+  
+  
+  // Top Heading Container
+  .top-heading>div {
+    .padding-x(40px);
+  }
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>.products-variation>.decoration-selection{
+  
+    >div:not(:first-child) > label {
+      padding: 3px 8px;
+    }
+  }
+  // Product Description on (Products Detail Page)
+  .product-description-section>.description-tabs>button {
+
+    padding: 3px 14px;    
+  }
+
+}
+
+
+
+// Screen Width 375px to 1023px
+@media (min-width: 375px) and (max-width: 1022.98px) {
+
+  // Products Filter Container on Products Page
+  .products-filter-container-pp {
+    >div {
+      padding: 5px 25px;
+    }
+  }
+}
+
+
+
+// Screen Width 0px to 500px
+@media (max-width: 500px) {
+
+  // Logo Image
+  header>nav>.logo {
+    width: 140px;
+    height: 31px;
+  }
+  // Products Heading
+  .products-heading>div>h5 {
+    font-size: 8px;
+  }
+  // All Cards
+  .cards-list {
+    .card {
+      height: 110px;
+    } 
+    // First Card
+    >:first-child>.card>div {
+      h1 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+    // Remaining Cards
+    >:not(:first-child, :last-child)>a .card h3 {
+      font-size: 14px;
+    }
+    // Last Card
+    >:last-child .card {
+      p {
+        font-size: 7px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }    
+  }
+  // Search
+  .search-container>div {
+    padding: 40px 43px;
+
+    >h1 {
+      font-size: 16px;
+    }
+    >p {
+      font-size: 11px;
+      line-height: 16.5px;
+    }
+    >form>input {
+      padding: 8px 45px;  
+
+      >.dropdown>:first-child {
+        height: 220px;
+      
+        >ul {
+          padding-left: 1rem;
+        }
+      }  
+    }
+  }
+  // Brands Logos
+  .brands-logos>img {
+    width: 8%;
+  }
+  // Brand Merch Section
+  .brand-merch-section {
+    background-size: 100% 85%;
+  }
+  // Lets Talk Section
+  .lets-talk-section{
+    >.book-meeting>:last-child>button {
+      padding: 6px 20px;
+      font-size: 16px;
+    }
+    >.live-chat {
+      margin-top: 20px;
+    }
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 110px;
+
+    >img {
+      margin-top: 64px;
+      width: 60px;
+    }
+  }
+  // Form (Register, Login, ChangePassword)
+  .form-container>div {
+
+    >.login-div, >.register-div {
+      padding: 30px 50px;
+      border-radius: 110px;
+    }
+
+    >div {
+      >.login-heading, >.register-heading {
+      margin-left: 0px;
+      text-align: center;
+      }  
+      >.form-heading {
+        >p {
+          font-size: 9px;
+        
+          >a {
+            font-size: 12px;
+          }
+        }
+      }
+      >.form-fields>:last-child {
+        text-align: center;
+        
+        >div>a {
+          font-size: 12px;
+        }
+      }
+    }
+  }  
+  // Products Container on (Products Page) 
+  .products-container-pp {
+    h5 {
+      font-size: 9px;
+    }
+  }
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>.products-variation{    
+    
+    >.decoration-selection>div{
+    
+      >label {
+        font-size: 12px;
+      }
+      &:first-child > label {
+        padding: 2px 17px;
+      }
+    }
+    >.quantity-range-slider {
+
+      >.quantity-slider>input {
+        height: 10px;
+      }
+      >.quantity-labels>div {
+        font-size: 10px;
+      }
+    }
+    >.add-to-cart-section>.add-button>div:last-child>a {
+      padding: 3px 20px;
+    }
+
+  }
+  // Product Description on (Products Detail Page)
+  .product-description-section {
+
+    >.horizontal-line {
+      width: 91%;
+      top: 11px;
+    }
+    >.description-tabs>button {
+      font-size: 12px;
+    }
+  }
+  // How to Order on (Products Detail Page)
+  .how-to-order>div:last-child>img {
+    margin-top: 64px;
+  }
+}
+
+// Screen Width 0px to 600px
+@media (max-width: 600px) {
+
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>div>.products-carousel {  // Owl Carousel
+    height: 50%;
+
+    div {
+      height: 50%;
+
+      .carousel-img-pdp>img {
+        height: 50%;
+      }
+    }
+
+  }
+
+}
+
+
+
+// Screen Width 0px to 768px
+@media (max-width: 767.98px) {
+
+  // Brand Merch Section
+  .brand-merch-section>div>:first-child>p {
+    font-size: 11px;
+  }
+
+
+}
+
+
+
+// Screen Width 0px to 1023px
+@media (max-width: 1022.98px) {
+
+  // Lets Talk Section
+  .lets-talk-section {
+    >.book-meeting>:first-child, >.live-chat>div {
+      >h1 {
+        font-size: 22px;
+      }
+      >p {
+        font-size: 11px;
+      }
+    }
+  }
+  // Footer
+  footer {
+
+    >:first-child>img {
+      width: 200px;
+    }
+    >:last-child>img {
+      width: 180px;
+    }
+  }
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>div {
+
+    .dropdown-pp {
+
+      >.products-filter-pp, >.dropdown-menu-pp>ul>.dropdown-item-pp{
+        font-size: 10px;
+      }
+    }  
+  }
+  // How to Order on (Products Detail Page)
+  .how-to-order>div:last-child>img {
+    width: 155px;
+  }
+}
+
+
+
+// Screen Width 501px and up
+@media (min-width: 501px) {
+
+  // Navbar
+  header>nav {
+    .padding-x(32px);
+  }
+  // Products Container on Products Page 
+  .products-container-pp {
+    h5 {
+      font-size: 14px;
+    }
+  }
+}
+
+
+
+// Screen Width 501px to 768px
+@media (min-width: 501px) and (max-width: @md) {
+
+  // Search
+  .search-container>div {
+    padding: 40px 115px;
+  
+    >p {
+      font-size: 11px;
+      line-height: 16.5px;
+    }
+    >form>input {
+      padding: 10px 45px;
+    }
+  }
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>.products-variation>.decoration-selection{
+
+    >div>label {
+      font-size: 16px;
+    }
+    >div:first-child > label {
+      padding: 3px 42px;
+    }
+    >div:not(:first-child) > label {
+      padding: 3px 30px;
+    }
+  }
+
+}
+
+
+
+// Screen Width 501px to 1022px
+@media (min-width: 501px) and (max-width: 1023px) {
+  
+  // Logo Image  
+  header>nav>.logo {
+    width: 250px;
+    height: 40px;
+  }
+  // Products Heading
+  .products-heading>div>h5 {
+    font-size: 13px;
+  }
+  // All Cards
+  .cards-list {
+    .card {
+      height: 150px;
+    } 
+    // First Card
+    >:first-child>.card>div {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+    // Remaining Cards
+    >:not(:first-child, :last-child)>a .card h3 {
+      font-size: 20px;
+    }    
+    // Last Card
+    >:last-child .card {
+      p {
+        font-size: 12px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+  // Brand Merch Section
+  .brand-merch-section {
+    background-size: 125% 85%;
+  }
+  // Lets Talk Section  
+  .lets-talk-section>.book-meeting>:last-child>button {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 152px;
+
+    >img {
+      margin-top: 37px;
+      width: 155px;
+    }
+  }
+  // Form (Register, Login, ChangePassword)
+  .form-container {
+    padding-top: 50px;
+    padding-bottom: 51px; 
+  }
+  // Products Filter Container on Products Page
+  .products-filter-container-pp>div>div {
+
+    .dropdown-pp {
+      
+      >.products-filter-pp{
+        width: 125px;
+      }
+    }  
+  }
+  // How to Order on (Products Detail Page)
+  .how-to-order>div:last-child>img {
+    margin-top: 37px;
+  }
+}
+
+
+
+// Screen Width 768px to 1022px
+@media (min-width: @md) and (max-width: 1023px) {
+
+  // Search
+  .search-container>div {
+    padding: 40px 125px;
+
+    >p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  // Form (Register, Login, ChangePassword)
+  .form-container>div{
+    // Login Form
+    >.login-div {
+      padding: 40px 160px;
+      border-radius: 160px;
+    }
+    >.register-div {
+      padding: 40px 80px;
+      border-radius: 300px;
+    }
+    >div {
+      // Login Form
+      >.login-heading {
+        margin-left: 4rem;
+      }
+      // Register Form
+      >.register-heading {
+        margin-left: 11rem;
+      }
+
+      >.form-heading {
+      
+        >p {
+          font-size: 12px;
+              
+          >a {
+            font-size: 12px;
+          }
+        }
+      }
+      >.form-fields>:last-child>div>a {
+        font-size: 12px;
+      }
+    }
+  }
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>.products-variation>.decoration-selection{
+
+    >div>label {
+      font-size: 12px;
+    }
+    >div:first-child > label {
+      padding: 3px 24px;
+    }
+    >div:not(:first-child) > label {
+      padding: 3px 17px;
+    }
+  }
+ 
+}
+
+
+
+// Screen Width 768px to 1278px
+@media (min-width: @md) and (max-width: 1279px) {
+
+  // Brand Merch Section
+  .brand-merch-section>div>:first-child>p {
+    font-size: 13px;
+  }
+}
+
+
+
+// Screen Width 1023px and up
+@media (min-width: 1023px) {
+
+  // Cards 1st and 2nd
+  .cards-list {
+    // All Cards
+    .card {
+      height: 175px;
+    }
+    // Last Card
+    >:last-child .card h2 {
+      font-size: calc(1.325rem + .9vw);
+    }
+  }
+}
+
+
+
+// Screen Width 1024px to 1278px
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  // Cards 1st and 2nd
+  .cards-list {
+    // First Card
+    >:first-child>.card>div {
+      h1 {
+        font-size: 23px;  
+      }
+      p {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+    // Remaining Cards
+    >:not(:first-child, :last-child)>a .card h3 {
+      font-size: 23px;
+    } 
+    // Last Card
+    >:last-child .card p {
+        font-size: 15px;
+    }      
+  }
+  // Search
+  .search-container>div {
+    padding: 40px 130px;
+
+    >p {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  // Brand Merch Section
+  .brand-merch-section {
+    background-size: 100% 80%;
+  }
+  // Lets Talk Section  
+  .lets-talk-section>.book-meeting>:last-child>button {
+    padding: 12px 40px;
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 203px;
+
+    >img {
+      width: 170px;
+    }
+  }
+  // Form (Register, Login, ChangePassword)
+  .form-container {
+    padding-top: 131px;
+    padding-bottom: 131px;
+          
+    >div{
+      // Register Form
+      >.register-div {
+        padding: 40px 115px;
+        border-radius: 270px;
+      }
+      >div {
+        // Register Form
+        >.register-heading {
+          margin-left: 12rem;
+        }
+        // Login Form
+        >.form-heading>p {
+        font-size: 11px;
+        }
+      }
+    }
+  }
+  // Products Selection Container on (Products Detail Page)
+  .products-selection-container>div>.products-variation>.decoration-selection{
+
+    >div>label {
+      font-size: 13px;
+    }
+    >div:first-child > label {
+      padding: 3px 29px;
+    }
+    >div:not(:first-child) > label {
+      padding: 3px 20px;
+    }
+  }
+  // How to Order on (Products Detail Page)
+  .how-to-order>div:last-child>img {
+    width: 170px;
+  }
+}
+
+
+
+// Screen Width 1279px and up
+@media (min-width: 1279px) {
+
+  // Cards 1st and 2nd
+  .cards-list {
+  // First Card
+  >:first-child>.card>div {
+    h1 {
+      font-size: 2.5rem;  
+    }
+    p {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+  // Remaining Cards
+  >:not(:first-child, :last-child)>a .card h3 {
+    font-size: 1.75rem;
+  }   
+  }
+  // Search
+  .search-container>div {
+    padding: 40px 185px;
+  }  
+}
+
+
+
+// Screen Size 1440px and up
+@media (min-width: 1440px){
+
+  // Brand Merch Section
+  .brand-merch-section>div>:first-child>p {
+    font-size: 21px;
+  }
+  // Bottom Image
+  .bottom-image {
+    height: 285px;
+
+    >img {
+      margin-top: 120px;
+    }    
+  }
+  // Form (Register, Login, ChangePassword)
+  .form-container>div>div {
+
+    // Login Form
+    >.login-heading {
+      margin-left: 7rem;
+    }
+    // Register Form
+    >.register-heading {
+      margin-left: 13rem;
+      // margin-left: calc(40%/1.2);  // Can also be used instead of Fixed Values (Preffered) 
+    }
+  }
+  // How to Order on (Products Detail Page)
+  .how-to-order>div:last-child>img {
+    margin-top: 120px;
+  }
+}

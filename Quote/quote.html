@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Less (CSS Preprocessor) -->
+  <link rel="stylesheet/less" type="text/css" href="../styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
+
+  <!-- Javascript -->
+  <script src="./dashboard.js" defer></script>
+  
+</head>
+
+<body>
+  <!-- Navbar -->
+  <!-- Header (Dashboard Page) -->
+  <header class="header-pp">
+    <nav>
+      <a href="./products.html">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON.png" height="30">
+      </a>
+      <a href="./">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-2.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-1.png" height="30">
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B28.png" height="70" width="500" class="logo">
+      <a href="#search">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-4.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-6.png" height="30">
+      <a href="./login.html" title="Login">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-5.png" height="30">
+      </a>
+    </nav>
+  </header>
+
+  <!-- Top Heading Container -->
+  <div class="top-heading">
+    <div>
+      <h3>Quote.</h3>
+    </div>
+  </div>
+
+  <!-- Cart and Checkout -->
+  <form action="#" method="post" enctype="multipart/form-data" class="cart-checkout" id="checkout-from">
+
+    <!-- Cart -->
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>STYLE</th>
+          <th>LOGO</th>
+          <th>COLOUR</th>
+          <th>QTY</th>
+          <th>UNIT</th>
+          <th>EXT</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="cart-1st-row">
+          <td>
+            <p>100166</p>
+            <b>Supa Sipper Bottle</b>
+          </td>
+
+          <td>
+            <div>
+              <select name="decorations[100166]" required>
+                <option value="No Logo" selected="">No Logo</option>
+                <option value="1 Color Print">1 Color Print</option>
+                <option value="2 Color Print">2 Color Print</option>
+                <option value="3 Color Print">3 Color Print</option>
+                <option value="4 Color Print">4 Color Print</option>
+                <option value="5 Color Print">5 Color Print</option>
+              </select>
+            </div>
+          </td>
+
+          <td>
+            <div>
+              <select name="colors[100166]" required>
+                <option value="">Select Color</option>
+                <option value="Silver">Silver</option>
+                <option value=" Frosted Clear">Frosted Clear</option>
+                <option value=" White">White</option>
+                <option value=" Yellow">Yellow</option>
+                <option value=" Orange">Orange</option>
+                <option value=" Pink">Pink</option>
+                <option value=" Red">Red</option>
+                <option value=" Bright Green">Bright Green</option>
+                <option value=" Dark Green">Dark Green</option>
+                <option value=" Teal">Teal</option>
+                <option value=" Light Blue">Light Blue</option>
+                <option value=" Dark Blue">Dark Blue</option>
+                <option value=" Navy">Navy</option>
+                <option value=" Purple">Purple</option>
+                <option value=" Black.">Black.</option>
+              </select>
+            </div>
+          </td>
+
+          <td>
+            <div class="quantity-filter quantity-filter-pdp">
+              <button id="decrement-pdp" disabled>-</button>
+              <div>
+                <input type="number" name="quantity[100166]" value="100" min="100" maxlength="4" id="quantity-input-pdp" readonly>
+              </div>
+              <button id="increment-pdp">+</button>
+            </div>
+          </td>
+
+          <td>$4.42</td>
+
+          <td>450.84</td>
+                    
+        </tr>
+
+        <tr class="cart-2nd-row">
+          <td></td>
+
+          <td>
+            <div>
+              <label for="cart-file-1" class="cart-file">Drag and Drop Files for this product here</label>
+              <input type="file" name="artwork_files[100166]" id="cart-file-1" multiple>
+            </div>
+            <div>
+              <b>COMMENTS.</b>
+              <textarea name="comments[100166]"></textarea>
+            </div>
+          </td>
+          
+          <td></td>
+
+          <td>
+            <button type="button">Remove</button>
+          </td>
+          
+          <td></td>
+          <td></td>
+
+        </tr>
+      </tbody>
+      
+
+    </table>
+    
+  </form>
+
+  
+
+
+  <!-- Footer -->
+  <footer class="footer-fixed">
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
+    </div>
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B27.jpg">
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
