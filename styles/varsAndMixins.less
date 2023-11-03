@@ -1,0 +1,22 @@
+// Screen Widths
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+@xxl: 1400px;
+
+
+// Mixins 
+.container(@screen-width) {
+  max-width: if((@screen-width = @sm), 540px);
+  max-width: if((@screen-width = @md), 720px);
+  max-width: if((@screen-width = @lg), 960px);
+  max-width: if((@screen-width = @xl), 1140px);
+  max-width: if((@screen-width = @xxl), 1320px);
+  margin-left: auto;
+  margin-right: auto;  
+}
+.padding-x(@padding-left-right) {
+  padding-left: @padding-left-right;
+  padding-right: @padding-left-right;
+}
