@@ -1407,17 +1407,19 @@ footer {
     }
   }
 }
-// Cart and Checkout
+// Cart and Checkout on (Quote Page)
 .cart-checkout {
   margin-top: 3rem;
   .padding-x(12px);
 
+  // Cart
   >.cart-table {
     // border: solid;
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     vertical-align: middle;
+    border-collapse: collapse;  // in order to give 'borders' to 'thead or tbody or tfoot', collapse the table borders
 
     >thead {
       vertical-align: bottom;
@@ -1546,4 +1548,83 @@ footer {
     }
 
   }
+  // Checkout
+  >.checkout-form-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    
+    >div {
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    >.checkout-form {
+      width: 100%;
+      gap: 12px 24px;
+
+      >label {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 0.875rem;
+      }
+      >input {
+        border: 0px;
+        background: #f6f6f6;
+        border-radius: 0px;
+        min-height: calc(1.5em + 0.5rem + 2px);
+        padding: 0.25rem 0.5rem;
+        font-size: .875rem;
+      }
+    }
+    >.checkout-help {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 8px;
+
+      >h2 {
+        flex-shrink: 0;
+        font-weight: 700;
+      }
+      >div {
+        flex-shrink: 0;
+        display: flex;
+        column-gap: 8px;
+
+        >img {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  // Submit Cart 
+  >.submit-cart {
+    margin-top: 5rem;
+
+    >p {
+      margin-left: 0.5rem;
+      font-size: 1.25rem;
+    }
+    >button {
+      width: 100%;
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+      background-color: #212529;
+      border-color: #212529;
+      border-radius: 20px;
+      color: #fff;
+      padding: 5px 20px;
+      font-size: 14px;
+    }
+  }
+}
+// Bottom Image on (Quote Page)
+.quote-bottom-img {
+  margin-top: 80px;
+  margin-bottom: 100px;
+  .padding-x(12px);
 }

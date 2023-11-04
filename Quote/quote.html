@@ -9,9 +9,6 @@
   <!-- Less (CSS Preprocessor) -->
   <link rel="stylesheet/less" type="text/css" href="../styles.less" />
   <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
-
-  <!-- Javascript -->
-  <script src="./dashboard.js" defer></script>
   
 </head>
 
@@ -148,14 +145,52 @@
       
 
     </table>
-    
-  </form>
 
+    <!-- Checkout Form (CF) -->
+    <div class="checkout-form-container">
+
+      <div class="checkout-form">
+        <label for="">COMPANY</label>
+        <input type="text" name="company" id="company-cf" autocomplete="organization" required>
+        <label for="">CONTACT</label>
+        <input type="text" name="contact" id="contact-cf" required>
+        <label for="">EMAIL</label>
+        <input type="email" name="email" id="email-cf" autocomplete="email" required>
+        <label for="">PHONE</label>
+        <input type="tel" name="phone" id="phone-cf" autocomplete="tel" required>
+        <label for="">WEBSITE</label>
+        <input type="url" name="website" id="website-cf" autocomplete="url" required>
+        <label for="">ADDRESS</label>
+        <input type="text" name="address" id="address-cf" autocomplete="street-address" required>
+      </div>
+
+      <div class="checkout-help">
+        <h2>Need Help.</h2>
+        <div>
+          <p>Have a question? <br> Email or Chat.</p>
+          <img src="https://ordopromo.fiqsolution.com/new_assets/images/Asset 2.png" alt="need help" width="30" height="30">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sumbit Cart -->
+    <div class="submit-cart">
+      <p><b>Submit.</b>  to receive artwork and order confirmations.</p>
+      <button type="submit">Submit.</button>
+    </div>
+
+  </form>
+  
+  <!-- Bottom Image -->
+  <div class="quote-bottom-img">
+    <img src="https://ordopromo.fiqsolution.com/new_assets/images/Asset 18.png" alt="Guide Image" width="100%">
+  </div>
   
 
 
   <!-- Footer -->
-  <footer class="footer-fixed">
+  <footer>
     <div>
       <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
     </div>

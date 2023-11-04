@@ -42,7 +42,7 @@
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
-          .product-description-section, .how-to-order, .dashboard-container, .cart-checkout {
+          .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img {
     .container(@md);
   }
   .products-list>div, .cards-list>div {
@@ -123,6 +123,22 @@
     }
 
   }
+  // Cart and Checkout
+  .cart-checkout {
+    // Submit Cart 
+    >.submit-cart {
+      display: flex;
+      justify-content: end;
+      
+      >button {
+        width: auto;
+        margin-top: 0;
+      }
+    }
+    // or on '.cart-checkout', just set the display: flex; with flex-direction: column; for size below @md and then at size @md,
+    // just set the flex-direction: row; so you do not need to give 'button' a width: 100%; for size below @md and width: auto;
+    // at size @md.
+  }
 
 }
 
@@ -133,7 +149,7 @@
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
-          .product-description-section, .how-to-order, .dashboard-container, .cart-checkout {
+          .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img {
     .container(@lg);
   }
   .products-list>div {
@@ -187,7 +203,27 @@
       width: calc(50%/1.2);
       margin-left: calc(40%/1.2);
     }
-  }  
+  }
+  // Cart and Checkout
+  .cart-checkout {
+    // Checkout
+    >.checkout-form-container {
+
+      >.checkout-form {
+        width: calc((80%/1.2) - (24px * (2 - 1)) / (2));
+        
+        >label {
+          width: calc((20%/1.2) - (24px * (2 - 1)) / (2));          
+        }
+        >input {
+          width: calc((100%/1.2) - (24px * (2 - 1)) / (2));          
+        }
+      }
+      >.checkout-help {
+        width: calc((40%/1.2) - (24px * (2 - 1)) / (2));
+      }
+    }
+  }
   
 }
 
@@ -198,7 +234,7 @@
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
-          .product-description-section, .how-to-order, .dashboard-container, .cart-checkou, .cart-checkoutt {
+          .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img {
     .container(@screen-width: @xl);
   }
   .products-list>div {
@@ -230,7 +266,7 @@
 
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
-          .product-description-section, .how-to-order, .cart-checkout {
+          .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img {
     .container(@xxl);
   }
   .products-list>div {
