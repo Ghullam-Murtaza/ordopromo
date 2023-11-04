@@ -1628,3 +1628,138 @@ footer {
   margin-bottom: 100px;
   .padding-x(12px);
 }
+// Top Heading on (Get Quote Page)
+.th-get-quote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  // vertical centering of the nested 'p' can also be done by giving 'align-self:center;' or
+  // vertical margins = auto (margin: auto 0px;) to that 'p' element.
+
+  >p {
+    font-size: 13px;
+  }
+}
+// Paragraphs Visible Until Large Screen (@lg) on (Get Quote Page)
+.para-until-lg {
+  margin-top: 3rem;
+  .padding-x(12px);
+  
+  >div>p {
+    margin-bottom: 1rem;
+    font-weight: 100;
+  }
+  >div:last-child {
+    margin-top: 4rem;    
+  }
+}
+// Form Tabs (gq = Get Quote) on (Get Quote Page)
+.form-tabs-gq {
+  margin-top: 3rem;
+  .padding-x(12px);
+
+  >div {
+
+    >button {
+      border: 0px;
+      border-radius: 20px;
+      font-size: 14px;
+      padding: 4px 15px;
+      color: black;
+      background-color: #f6f6f6;
+
+      &.active {
+        color: #fff;
+        background-color: #212529;
+        border-color: #212529;
+      }
+
+      &:first-child {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}
+// Form Container on (Get Quote Page)
+.form-container-gq {
+  margin-top: 1.5rem;
+  .padding-x(12px);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+
+  // Paragraphs Visible from Large Screen (@lg)
+  >.para-from-lg {
+    display: none;
+    flex-shrink: 0;
+
+    >div>p {
+      margin-bottom: 1rem;
+      font-weight: 100;
+    }
+  }
+  // Checkout Form on (Get Quote Page)
+  .checkout-form-gq {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    gap: 16px 24px;
+
+    // Form Labels
+    >.labels-gq {
+      width: calc((40%/1.2) - (24px * (2 - 1)) / (2));
+      flex-shrink: 0;
+      padding-top: calc(0.25rem + 1px);
+      padding-bottom: calc(0.25rem + 1px);
+      font-size: .875rem;
+      // align-self: center;
+      // border: solid;
+      
+    }
+    // Form Fields
+    >.fields-gq {
+      width: calc((80%/1.2) - (24px * (2 - 1)) / (2));
+      flex-shrink: 0;
+      // align-self: center;
+      // border: solid;
+      
+      &.radio-group {
+        display: flex;
+        // padding-top: 4px;
+        align-items: center;
+        >input {
+          display: inline-block;
+          // margin-top: 0.25em;
+          margin-right: 0.5rem;
+          padding: 0;
+          width: 1em;
+          height: 1em;
+          // vertical-align: middle;
+          background-color: #fff;
+          border: 1px solid rgba(0,0,0,.25);
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-radius: 50%;
+
+          &:checked {
+            
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+            background-color: #000000;
+            border-color: #212529;
+          }
+        }
+        >label:first-of-type {
+          margin-right: 1rem;
+        }
+        >label {
+          padding: 0px;
+          // padding-top: 4px;
+        }
+      }
+
+    }
+  }
+}

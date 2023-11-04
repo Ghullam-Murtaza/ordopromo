@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Less (CSS Preprocessor) -->
+  <link rel="stylesheet/less" type="text/css" href="../styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less" defer></script>
+  
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="header-pp">
+    <nav>
+      <a href="./products.html">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON.png" height="30">
+      </a>
+      <a href="./">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-2.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-1.png" height="30">
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B28.png" height="70" width="500" class="logo">
+      <a href="#search">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-4.png" height="30">
+      </a>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-6.png" height="30">
+      <a href="./login.html" title="Login">
+        <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-MENU-BUTTON-5.png" height="30">
+      </a>
+    </nav>
+  </header>
+
+  <!-- Top Heading Container -->
+  <div class="top-heading">
+    <div class="th-get-quote">
+      <h3>Get a Quote.</h3>
+      <p>Private & Confidential</p>
+    </div>
+  </div>
+  <!-- Paragraphs Visible Until Large Screen (@lg) -->
+  <div class="para-until-lg">
+    <div>
+      <p>
+        Let us create a <b>design concept</b> range of
+        cost effective promotional stock or custom made merchandise to make
+        lasting brand awareness.
+      </p>
+      <p>
+          We offer a range of cost effective services and
+          <b>new product</b> development plans to help
+          entrepreneurs, startups and established businesses bring new product
+          ideas successfully to market.
+      </p>
+      <p>
+          For a free confidential review please submit your idea using the
+          form provided.
+      </p>
+      <p>
+          The questions on the form allow you to provide information about
+          your idea that enable us to provide initial advice, cost estimates
+          and a detailed proposal bespoke to your project.
+      </p>
+    </div>
+    
+    <div>
+      <p>
+        Let us create a <b>design concept</b> range of
+        cost effective promotional stock or custom made merchandise to make
+        lasting brand awareness.
+      </p>
+      <p>
+          We offer a range of cost effective services and
+          <b>new product</b> development plans to help
+          entrepreneurs, startups and established businesses bring new product
+          ideas successfully to market.
+      </p>
+      <p>
+          For a free confidential review please submit your idea using the
+          form provided.
+      </p>
+      <p>
+          The questions on the form allow you to provide information about
+          your idea that enable us to provide initial advice, cost estimates
+          and a detailed proposal bespoke to your project.
+      </p>
+    </div>
+  </div>
+
+  <!-- Form Tabs (gq = Get Quote)-->
+  <div class="form-tabs-gq">
+    <div>
+      <button type="button" id="design-concept-gq">Design Concept</button>
+      <button type="button" class="active" id="new-product-gq">New Product</button>
+    </div>
+  </div>
+
+  <!-- Form Get Quote  -->
+  <div class="form-container-gq">
+
+    <!-- Paragraphs Visible from Large Screen (@lg) -->
+    <div class="para-from-lg">
+      <div>
+        <p>
+          Let us create a <b>design concept</b> range of
+          cost effective promotional stock or custom made merchandise to make
+          lasting brand awareness.
+        </p>
+        <p>
+            We offer a range of cost effective services and
+            <b>new product</b> development plans to help
+            entrepreneurs, startups and established businesses bring new product
+            ideas successfully to market.
+        </p>
+        <p>
+            For a free confidential review please submit your idea using the
+            form provided.
+        </p>
+        <p>
+            The questions on the form allow you to provide information about
+            your idea that enable us to provide initial advice, cost estimates
+            and a detailed proposal bespoke to your project.
+        </p>
+      </div>
+      
+    </div>
+
+    <!-- Form -->
+    <form action="#" method="post" enctype="multipart/form-data" class="checkout-form-gq" id="design-concept-gp-form">
+
+      <!-- <div class="about-you"> -->
+
+        <p class="labels-gq">About You</p>
+        
+        <div class="radio-group fields-gq">
+
+          <input type="radio" id="established" name="aboutYou" value="Established_Company">
+          <label for="established">Established Company</label>
+
+          <input type="radio" id="startup" name="aboutYou" value="Startup">
+          <label for="startup">Startup / Entrepreneur</label>
+        </div>
+
+        <p class="labels-gq">About You</p>
+        <p class="fields-gq">About You</p>
+
+        <!-- <div> -->
+          <label for="company_name" class="labels-gq">Company Name</label>
+          <div class="fields-gq">
+            <input type="text" name="company_name" id="company_name" autocomplete="organization" required>
+          </div>
+        <!-- </div> -->
+
+        <!-- <div> -->
+          <label for="position" class="labels-gq">Position</label>
+          <div class="fields-gq">
+            <input type="text" name="position" id="position" required>
+          </div>
+        <!-- </div> -->
+  
+        <!-- <div> -->
+          <label for="fname" class="labels-gq">First Name</label>
+          <div class="fields-gq">
+            <input type="text" name="fname" id="fname" autocomplete="given-name" required>
+          </div>
+        <!-- </div> -->
+      
+        <!-- <div> -->
+          <label for="lname" class="labels-gq">Last Name</label>
+          <div class="fields-gq">
+            <input type="text" name="lname" id="lname" autocomplete="family-name" required>
+          </div>
+        <!-- </div>           -->
+      
+        <!-- <div> -->
+          <label for="register_email" class="labels-gq">Email</label>
+          <div class="fields-gq">
+            <input type="email" name="register_email" id="register_email" autocomplete="email" required>
+          </div>
+        <!-- </div> -->
+      
+        <!-- <div> -->
+          <label for="register_password" class="labels-gq">Password</label>
+          <div class="fields-gq">
+            <input type="password" name="register_password" id="register_password" autocomplete="new-password" required>
+          </div>
+        <!-- </div> -->
+  
+        <!-- <div> -->
+          <label for="register_confirm_password" class="labels-gq">Confirm Password</label>
+          <div class="fields-gq">
+            <input type="password" name="register_confirm_password" id="register_confirm_password" autocomplete="new-password" required>
+          </div>
+        <!-- </div> -->
+        
+      <!-- </div> -->
+      
+    </form>
+
+  </div>
+
+
+  
+
+  
+
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/ORDO-LOGO-BLACK.jpg" alt="logo">
+    </div>
+    <div>
+      <img src="https://ordopromo.fiqsolution.com/new_assets/images/HOME-B27.jpg">
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
