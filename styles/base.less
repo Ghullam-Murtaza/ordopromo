@@ -37,7 +37,7 @@ img {
 a {
   color: #0d6efd;
   text-decoration: none;
-  display: inline-block;
+  // display: inline-block;
   // -webkit-tap-highlight-color: transparent;
 }
 label {
@@ -127,6 +127,22 @@ header {
     border-radius: 50px;
     .padding-x(12px);
     z-index: 999;
+
+    .cart-count {
+      display: inline-block;
+      margin-left: -15px;
+      margin-top: -3px;
+      padding: 2px 5px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      vertical-align: top;
+      white-space: nowrap;
+      border-radius: 0.25rem;
+      background: #fff;
+      color: #000000;
+    }
   }
 }
 
@@ -223,9 +239,6 @@ header {
   >:not(:first-child, :last-child) {
 
     >a {
-      // text-decoration: none;
-      // -webkit-tap-highlight-color: transparent;
-      // display: block;
       
       .card {
         background-color: rgb(33, 37, 41);
@@ -238,7 +251,6 @@ header {
         }
       }
     }
-    
   }
   // Last Card
   >:last-child .card {
@@ -844,7 +856,7 @@ footer {
     border-radius: 35px;
     padding: 5px 60px;
 
-    >h3 {
+    >h3, >h5 {
       font-weight: 700;
     }
   }
@@ -1904,7 +1916,7 @@ footer {
 
     >thead {
       border-bottom: 1px solid #dee2e6;
-      
+
       >tr {
         >th {
           padding: 0.5rem 0.5rem;
@@ -1913,4 +1925,86 @@ footer {
       }
     }
   }
+}
+// Top Image on (Services Page)
+.top-image-services {
+  margin-top: 1.5rem;
+  .padding-x(12px);
+
+  >h2 {
+    font-weight: 700;
+    padding-left: 60px;
+  }
+  >img {
+    margin-top: 0.5rem;
+  }
+  >p {
+    padding-left: 60px;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 25px;
+  }
+  
+}
+// Services Detail on (Services Page)
+.services-detail {
+  margin-top: 100px;
+  .padding-x(12px);
+  background-image: url("https://ordopromo.fiqsolution.com/new_assets/images/ABOUT-B2.jpg");
+  background-size: 100% 325px;
+  background-repeat: no-repeat;
+
+  >div {
+    display: flex;
+    justify-content: space-around;
+
+    >div {
+
+      >h5>span {
+        box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+        border-radius: 20px;
+        padding: 5px 15px;
+      }
+      >p {
+        margin-top: 0.5rem;
+        font-weight: 200;
+      }
+    }
+    >div:last-child {
+      margin-top: -50px;
+      text-align: right;
+    }
+  }
+  >div:last-child {
+
+    >div:first-child {
+      margin-top: 200px;
+    }
+    >div:last-child {
+      margin-top: 150px;
+    }
+  }
+  &:last-of-type {
+    margin-bottom: 3rem;
+  }
+  
+}
+// How We Do It on (Services Page)
+.how-we-services {
+  margin-top: 50px;
+  .padding-x(12px);
+
+  >h2 {
+    padding-left: 60px;
+    font-weight: 700;
+  }
+  >p {
+    margin-top: 0.5rem;
+    padding-left: 60px;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 25px;
+  }
+
+
 }
