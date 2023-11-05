@@ -1871,3 +1871,46 @@ footer {
 
   }
 }
+
+// Order Details Container on (Order Details Page)
+.order-details-summary {
+  margin-top: 1rem;
+  .padding-x(12px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+
+  >div {
+    width: 100%;
+    flex-shrink: 0;
+    
+    >h6 {
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    >p {
+      margin-top: 0.5rem;
+    }
+  }
+}
+// Order Details Table on (Order Details Page)
+.order-details-table {
+  margin-top: 2rem;
+  .padding-x(12px);
+
+  >table {
+    width: 100%;
+    border-collapse: collapse;
+
+    >thead {
+      border-bottom: 1px solid #dee2e6;
+      
+      >tr {
+        >th {
+          padding: 0.5rem 0.5rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

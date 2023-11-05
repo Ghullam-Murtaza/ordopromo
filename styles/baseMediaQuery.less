@@ -43,7 +43,7 @@
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
           .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img, .para-until-lg,
-          .form-tabs-gq, .form-container-gq {
+          .form-tabs-gq, .form-container-gq, .order-details-summary, .order-details-table {
     .container(@md);
   }
   .products-list>div, .cards-list>div {
@@ -160,6 +160,15 @@
     }
   }
 
+  // Order Details Container
+  .order-details-summary {
+
+    >div {
+      width: calc((30%/1.2) - (24px * (4 - 1)) / (4));     
+    }
+  }
+
+
 }
 
 
@@ -170,7 +179,7 @@
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
           .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img, .para-until-lg,
-          .form-tabs-gq, .form-container-gq {
+          .form-tabs-gq, .form-container-gq, .order-details-summary, .order-details-table {
     .container(@lg);
   }
   .products-list>div {
@@ -279,7 +288,7 @@
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
           .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img, .para-until-lg,
-          .form-tabs-gq, .form-container-gq {
+          .form-tabs-gq, .form-container-gq, .order-details-summary, .order-details-table {
     .container(@screen-width: @xl);
   }
   .products-list>div {
@@ -312,7 +321,7 @@
   header, .products-heading, .products-list, .cards-list, .search-container, .brands-heading, .lets-talk-section, .form-container,
           .header-pp, .products-filter-container-pp, .products-container-pp, .top-heading, .products-selection-container,
           .product-description-section, .how-to-order, .dashboard-container, .cart-checkout, .quote-bottom-img, .para-until-lg,
-          .form-tabs-gq, .form-container-gq {
+          .form-tabs-gq, .form-container-gq, .order-details-summary, .order-details-table {
     .container(@xxl);
   }
   .products-list>div {
